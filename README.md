@@ -167,7 +167,7 @@ It is used to **facilitate communication** between:
 
 ## Case Diagrams
 
-A **case diagram** describes **system behaviour**, as **viewed externally**; they are **graphical** representation of **use cases**, and establish **system boundaries**.
+A **case diagram** describes **system behaviour**, as **viewed externally**; they are **graphical** representation of **use-cases**, and establish **system boundaries**.
 - external entities: **actors**
   - end users
   - external systems
@@ -201,15 +201,15 @@ An **activity diagram** describes the **system behaviour**; they are **graphical
 
 A **sequence diagram** is a **graphical** representation of **messages** between external actors and internal objects
 - to capture system behaviour
-- to show use cases as distributed across objects
-  - every **sequence diagram** describes behaviour of **one use case**
+- to show use-cases as distributed across objects
+  - every **sequence diagram** describes behaviour of **one use-case**
 
 ![sequence-diagram](img/sequence-diagram.png)
 
 ## Packages
 
 A **UML package** is a group of related UML diagrams, that organizes the diagrams and reduces the diagram complexity.
-- e.g. use case / class / sequence / state machine _diagrams_
+- e.g. use-case / class / sequence / state machine _diagrams_
 
 # Section 3: Requirement Analysis
 
@@ -237,7 +237,7 @@ The **role of development team**, in the requirement analysis is to **understand
 
 - first gather a detailed + complete set of requirements
   - from clients information
-  - _use cases + scenarios_
+  - _use-cases + scenarios_
   - should create a **system specification**
     - that can be understood by client
     - from user's point of view
@@ -292,7 +292,7 @@ Main categories:
 
 ## Traceability
 
-**Every requirement tracked** through development lifecycle (use cases -> system functions -> test cases)
+**Every requirement tracked** through development lifecycle (use-cases -> system functions -> test cases)
 - all **dependencies documented**
 - facilitates maintenance of project
   - change impact easier to assess
@@ -333,12 +333,13 @@ completeness
 **Identifying:**
 - actors
 - scenarios
-- use cases (+ refining)
-- actor / use case relationships
+- use-cases (+ refining)
+- actor / use-case relationships
 - initial analysis objects
 - non-functional requirements
 
 ### Identifying Actors
+
 **An actor** is an entity that **interacts** with the system; they are **role abstraction**.
 - e.g. people / users
   - that need **access to the system**
@@ -351,7 +352,8 @@ completeness
 Actors are useful for **defining the system boundaries**.
 
 ### Identifying Scenarios
-**A scenario** is an instance of a **use case** that describes the system as **user interactions**; they describe a **single feature** from the **point of view** of a user.
+
+**A scenario** is a _**component**_ of a **use-case** that describes the system as **user interactions**; they describe a **single feature** from the **point of view** of a user.
 
 Scenarios help figure out the main system functionality.
 - allows for clients + users to understand:
@@ -370,7 +372,66 @@ The goal is to **identify**:
 - **information** created / accessed / modified by actors
 - **interactions** between actors + system
 
-### Identifying Use Cases
+### Identifying Use-Cases
+
+**A use-case** is a **set of scenarios** that describes user / system interactions, **initiated by an actor**; it distinguishes user steps / system steps.
+
+Use-cases are used to **facilitate client / developer communication**, and to **establish system scope**.
+
+They can be identified by using generalized high-level scenarios and asking clients / users about:
+- alternatives
+- feature details
+- constraints
+
+Then use detailed use-cases.
+
+Use-cases are represented with:
+- **table-based text descriptions**
+  - unique use-case name
+  - actors
+  - event flow
+    - responses should be indented
+    - other use-cases referenced using **extends** / **includes** / **inherits**
+  - entry conditions
+  - exit conditions
+  - quality requirements
+  - traceability
+- **UML use-case diagrams**
+  - there is no order specified
+    - it would be shown in the text description
+  - there should be no mapping to menu navigation
+    - button presses are not states
+
 ### Identifying Relationships
+
+**Relationships:**
+- between actors and use-cases:
+  - **communication**
+    - initiation / participation
+    - permissions
+- between use-cases:
+  - extend
+  - include
+  - inherit
+
+Use-case relationships are represented using:
+- case diagrams (arrows + labels)
+- case table-based text description
+  - using **extends** / **includes** / **inherits** (bold font)
+
+**Extend** relationship is when one use-case **extends the functionality** of another.
+- used for exceptional event flow
+  - e.g. **`ResponseTimeout`** extends **`Register`**
+- origin case is not aware about extending case
+  - extending case must have specific entry condition
+
+**Include** relationship is used to remove **redundant functionality** and break down the system complexity.
+- e.g. **`ViewProfile`** for animals and users
+- origin use-case triggers included use-case
+- included case is not aware of origin use-case
+
+**Inheritance** relationships indicates **use-case sub-types**.
+- this is not the same as **includes**
+
 ### Identifying Initial Analysis Objects
 ### Identifying Non-Functional Requirements

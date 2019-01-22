@@ -340,9 +340,36 @@ completeness
 
 ### Identifying Actors
 **An actor** is an entity that **interacts** with the system; they are **role abstraction**.
-- e.g. people / users / external systems
+- e.g. people / users
+  - that need **access to the system**
+  - that **execute** the main **functionality** of the system
+- e.g. external systems
+  - for input / output data
+  - (high-level functional systems, not implementation details)
+    - _OS / libraries are not external systems_
+
+Actors are useful for **defining the system boundaries**.
 
 ### Identifying Scenarios
+**A scenario** is an instance of a **use case** that describes the system as **user interactions**; they describe a **single feature** from the **point of view** of a user.
+
+Scenarios help figure out the main system functionality.
+- allows for clients + users to understand:
+  - application domain
+  - system
+
+Scenarios can be used to create test plans.
+
+To identify a scenario, you can use:
+- interviews with clients / users
+- application domain + procedure manuals
+- UI mock-ups
+
+The goal is to **identify**:
+- **tasks** performed by actors
+- **information** created / accessed / modified by actors
+- **interactions** between actors + system
+
 ### Identifying Use Cases
 ### Identifying Relationships
 ### Identifying Initial Analysis Objects

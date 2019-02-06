@@ -1,4 +1,4 @@
-# COMP-3004
+# COMP 3004 Notes
 
 📘 My notes for my Object-Oriented Software Engineering (CS) course – written in markdown.
 
@@ -8,9 +8,10 @@
 - must have a UI
   - wither Qt or commandline (fewer marks)
 
-# Arena Case Study
+# Table of Contents
 
-// to be filled out
+`// todo: fill out table of contents`<br>
+`// todo: split notes into files`
 
 # Section 1: Introduction to Software Engineering
 
@@ -383,6 +384,16 @@ They can be identified by using generalized high-level scenarios and asking clie
 - feature details
 - constraints
 
+#### High-Level Use-Case Diagram
+
+![high-level-use-case](img/high-level-use-case.png)
+
+`// high-level use-case diagrams contained in a box`
+
+#### Detailed Use-Case Diagram
+
+![detailed-use-case](img/detailed-use-case.png)
+
 Then use detailed use-cases.
 
 Use-cases are represented with:
@@ -402,6 +413,10 @@ Use-cases are represented with:
   - there should be no mapping to menu navigation
     - button presses are not states
 
+#### Table-Based Description
+
+![table-description](img/table-description.png)
+
 ### Identifying Relationships
 
 **Relationships:**
@@ -420,18 +435,33 @@ Use-case relationships are represented using:
   - using **extends** / **includes** / **inherits** (bold font)
 
 **Extend** relationship is when one use-case **extends the functionality** of another.
-- used for exceptional event flow
+- used only for **exceptional** event flow (i.e. `Exceptions`)
   - e.g. **`ResponseTimeout`** extends **`Register`**
 - origin case is not aware about extending case
   - extending case must have specific entry condition
+
+`// arrows can be dotted or not`
+
+![extends-use-case](img/extends-use-case.png)
 
 **Include** relationship is used to remove **redundant functionality** and break down the system complexity.
 - e.g. **`ViewProfile`** for animals and users
 - origin use-case triggers included use-case
 - included case is not aware of origin use-case
 
+`// arrows can be dotted or not`
+
+![includes-use-case](img/includes-use-case.png)
+
 **Inheritance** relationships indicates **use-case sub-types**.
 - this is not the same as **includes**
 
+![inheritance](img/inheritance.png)
+
 ### Identifying Initial Analysis Objects
+
+// todo: fill this out
+
 ### Identifying Non-Functional Requirements
+
+`// todo: fill this out`

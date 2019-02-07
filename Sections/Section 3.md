@@ -172,10 +172,13 @@ A group of peer subsystems, where each group is responsible for a set of unique 
 - **Repository**
   - synchronized through locks (e.g. mutexes)
 - **MVC (model-view-controller)**
+  - loose coupling between view and model
+    - allows for multiple views with shared models
 - **Client-Server**
   - synchronizes only with messages
 - **Peer-to-Peer**
   - generalization of client-server
+  - higher risk of deadlock
 - **Three-Tier**
 - interface / application logic / storage layers
 - **Four-Tier**
@@ -183,3 +186,40 @@ A group of peer subsystems, where each group is responsible for a set of unique 
 - **Pipe and Filter**
   - filters are subsystems
   - pipes are associations between subsystems
+  - used for data streams (simple)
+
+## Design Goals
+
+Design goals should take into account:
+- **performance**
+  - response time
+  - throughput
+  - memory efficiency
+- **dependability**
+  - robustness
+  - reliability
+  - fault tolerance
+  - security
+  - safety
+- **cost**
+  - development
+  - deployment
+  - upgrade
+  - maintenance
+  - administration
+- **maintenance**
+  - extensibility
+  - modifiability
+  - adaptability
+  - portability
+  - readability
+  - traceability
+- **end user**
+  - utility
+  - usability
+
+To **identify design goals** you you want to find the right balance of trade-offs based off the system requirements.
+- assign objects in a use case to one subsystem
+- create **subsystems to move data** between subsystems
+- **minimize** subsystem **associations**
+  - and ensure all **objects** in the same subsystem are **related**

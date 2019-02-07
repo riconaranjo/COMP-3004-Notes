@@ -66,7 +66,6 @@ One software engineering process that has two components:
 >   - detailed object design
 >   - implementation
 >   - testing
-
 > - **How do we model the application domain?**
 >   - describe the problem to be solved
 >   - describe the system requirements

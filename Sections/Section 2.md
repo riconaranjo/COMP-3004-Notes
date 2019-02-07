@@ -1,4 +1,6 @@
-# Section 6: Analysis
+# Section 2: Requirement Analysis
+
+# Section 2.3: Analysis
 
 High-level object categories:
 - entity

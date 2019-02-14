@@ -219,7 +219,69 @@ Design goals should take into account:
   - usability
 
 To **identify design goals** you you want to find the right balance of trade-offs based off the system requirements.
-- assign objects in a use case to one subsystem
+- assign objects in a use-case to one subsystem
 - create **subsystems to move data** between subsystems
 - **minimize** subsystem **associations**
   - and ensure all **objects** in the same subsystem are **related**
+
+To **identify** subsystems:
+- assign objects in a use-case to one subsystem
+- create dedicated subsystems to move data between subsystems
+- minimize associations between subsystems
+  - ensure objects within a subsystem are related
+
+# Section 3.3 : Design Patterns
+
+Design patterns are sets of classes and their associations that provide a framework to solve common design problems. They should be robust, modifiable, and adaptable.
+
+## Types of Design Problems
+- **creational:** object creation [mechanisms]
+  - _abstract factory_
+- **structural:** simplification of object associations / relationships
+  - _adapter_
+  - _bridge_
+  - _composite_
+  - _façade_
+  - _proxy_
+- **behavioural:** communication patterns between objects
+  - _command_
+  - _observer_
+  - _strategy_
+
+## Abstract Factory
+
+An **Abstract Factory** design pattern enables creation of objects, independent of the client.
+- it provides an interface to inherited factory classes, with different implementations.
+  - _e.g. products from different manufacturers_
+
+![abstract-factory](../img/abstract-factory.png)
+
+The arena case study implements this design pattern, where the `Game` object is an abstract factory.
+
+![arena-class-diagram](../img/arena-class-diagram.png)
+
+![arena-factory](../img/arena-factory.png)
+
+Notice how
+
+## Adapter
+
+An **Adapter** design pattern exists as a wrapper around existing / legacy code to provide a new interface to the client.
+- _e.g. new user interface for an old command line application_
+
+`// only works if it's a wrapper for existing code`
+
+![adapter](../img/adapter.png)
+
+## Bridge
+
+A **Bridge** design pattern allows for alternate implementations with a single interface.
+- e.g. _different storage implementations for one store_
+
+![bridge](../img/bridge.png)
+
+In this picture, the store would be the abstraction, and the concrete implementors would be different storage implementations.
+
+## Composite
+
+`// todo finish this`

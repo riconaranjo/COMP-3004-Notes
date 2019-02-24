@@ -174,13 +174,13 @@ They can be identified by using generalized high-level scenarios and asking clie
 
 #### High-Level Use-Case Diagram
 
-![high-level-use-case](img/high-level-use-case.png)
+![high-level-use-case](../img/high-level-use-case.png)
 
 `// high-level use-case diagrams contained in a box`
 
 #### Detailed Use-Case Diagram
 
-![detailed-use-case](img/detailed-use-case.png)
+![detailed-use-case](../img/detailed-use-case.png)
 
 Then use detailed use-cases.
 
@@ -203,7 +203,7 @@ Use-cases are represented with:
 
 #### Table-Based Description
 
-![table-description](img/table-description.png)
+![table-description](../img/table-description.png)
 
 ### Identifying Relationships
 
@@ -230,7 +230,7 @@ Use-case relationships are represented using:
 
 `// arrows can be dotted or not`
 
-![extends-use-case](img/extends-use-case.png)
+![extends-use-case](../img/extends-use-case.png)
 
 **Include** relationship is used to remove **redundant functionality** and break down the system complexity.
 - e.g. **`ViewProfile`** for animals and users
@@ -239,16 +239,15 @@ Use-case relationships are represented using:
 
 `// arrows can be dotted or not`
 
-![includes-use-case](img/includes-use-case.png)
+![includes-use-case](../img/includes-use-case.png)
 
 **Inheritance** relationships indicates **use-case sub-types**.
 - this is not the same as **includes**
 
-![inheritance](img/inheritance.png)
+![inheritance](../img/inheritance.png)
 
 ### Identifying Initial Analysis Objects
-
-// todo: fill this out
+**Initial analysis objects** are the main **participating objects** present in the system (i.e. objects in the use cases).
 
 ### Identifying Non-Functional Requirements
 

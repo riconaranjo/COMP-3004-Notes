@@ -93,7 +93,7 @@ One software engineering process that has two components:
 
 ## Development Phases
 
-![development-phases](img/development-phases.png)
+![development-phases](../img/development-phases.png)
 
 # Section 1.2: Team Project
 
@@ -178,7 +178,7 @@ A **class diagram** describes the **system** in terms of **classes**; they are *
 
 A **finite state machine** diagram is a **graphical** representation of an object's **state behaviour**: states + transitions.
 
-![state-diagram](img/state-diagram.png)
+![state-diagram](../img/state-diagram.png)
 
 **state:** a particular set of attributes for an object
 **transition:** conditions which change an object's state
@@ -188,7 +188,7 @@ A **finite state machine** diagram is a **graphical** representation of an objec
 An **activity diagram** describes the **system behaviour**; they are **graphical** representation of **sequencing and coordination**
 - describes **control flow / concurrency**
 
-![activity-diagram](img/activity-diagram.png)
+![activity-diagram](../img/activity-diagram.png)
 
 ## Sequence Diagrams
 
@@ -197,7 +197,7 @@ A **sequence diagram** is a **graphical** representation of **messages** between
 - to show use-cases as distributed across objects
   - every **sequence diagram** describes behaviour of **one use-case**
 
-![sequence-diagram](img/sequence-diagram.png)
+![sequence-diagram](../img/sequence-diagram.png)
 
 ## Packages
 

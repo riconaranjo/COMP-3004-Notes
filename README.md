@@ -6,6 +6,6 @@ This course covers the entire software development process, from the initial des
 
 # Table of Contents
 
-[Section 1](Sections/Section%201.md)
-[Section 2](Sections/Section%202.md)
-[Section 3](Sections/Section%203.md)
+Section 1: [Introduction to Software Engineering](Sections/Section%201.md)<br>
+Section 2: [Requirement Analysis](Sections/Section%202.md)<br>
+Section 3: [High-Level System Design](Sections/Section%203.md)<br>

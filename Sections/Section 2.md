@@ -247,11 +247,28 @@ Use-case relationships are represented using:
 ![inheritance](../img/inheritance.png)
 
 ### Identifying Initial Analysis Objects
-**Initial analysis objects** are the main **participating objects** present in the system (i.e. objects in the use cases).
+**Initial analysis objects** are the main **participating objects** present in the system (i.e. objects in the use-case).
+- identified by using use-cases to find:
+  - recurring nouns
+  - real-world entities + processes
+  - data-sources / data-sinks
+
+These objects are then collected in a glossary / data-dictionary.
 
 ### Identifying Non-Functional Requirements
 
-`// todo: fill this out`
+**Non-functional requirements** are user-visible constraints, used to document the client's needs; they are used to help prioritize conflicting requirements.
+
+**Categories:**
+- usability
+- reliability
+- performance
+- supportability
+- implementation
+- interface
+- operations
+- packaging
+- legal
 
 # Section 2.3: Analysis
 
@@ -277,5 +294,88 @@ The **analysis phase** is highly **iterative / incremental**, and is not necessa
   - structuring / formalizing the requirements
   - defining / describing the application domain
   - from the user's point of view
+
+## Analysis Concepts
+
+### Analysis Object Model
+
+The **analysis object model** is composed of **UML class diagrams** and is used for high-level concepts manipulated by the system.
+- and their properties / relationships
+
+_**Objects:**_
+- **entity:** persistent information used by the system
+- **boundary:** interactions between actors and the system
+- **control:** in charge of realizing use-case
+
+This model allows for **encapsulation** and **separation** between the interface and functionality _(boundary vs. entity + control objects)_.
+- this provides better maintenance / modifiability / extensibility.
+
+Classes should be named according to their category.
+
+### Dynamic Model
+
+The **dynamic model** is used to capture system behaviour from an external perspective, using **UML sequence diagrams** and **UML machine diagrams**.
+- **sequence diagrams** show interactions between objects in one use-case
+- **machine diagrams** show the behaviour of one object
+
+### Generalization + Specialization
+
+**Generalization:** identifying abstract concepts from specific concepts
+
+**Specialization:** identifying specific concepts from general concepts
+
+These are the concepts for inheritance.
+
+## Analysis Activities
+
+- identify: **entity** / **boundary** / **control objects**
+- map **use-case** to **sequence diagrams**
+- identify **associations** / **aggregates** / **attributes**
+- modelling **state-dependent behaviour**
+- modelling **inheritance relationships**
+- reviewing **analysis model**
+
+### Identifying Entity Objects
+
+To **identify entity objects**, start by examining all the use-case for:
+- recurring nouns
+- real-world entities + processes
+- data-sources / data-sinks
+
+List these entity objects in a data-dictionary, with attributes, associations, and definition.
+
+### Identifying Boundary Objects
+
+`// todo: fill this out`
+
+### Identifying Control Objects
+
+`// todo: fill this out`
+
+### Use-Case to Sequence Diagrams
+
+`// todo: fill this out`
+
+### Identifying Associations
+
+`// todo: fill this out`
+
+### Identifying Aggregates
+
+`// todo: fill this out`
+
+### Identifying Attributes
+
+`// todo: fill this out`
+
+### Modelling State-Dependent Behaviour
+
+`// todo: fill this out`
+
+### Modelling Inheritance Relationships
+
+`// todo: fill this out`
+
+### Reviewing the Analysis Model
 
 `// todo: fill this out`

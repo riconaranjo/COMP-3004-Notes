@@ -81,7 +81,9 @@ This phase establishes the runtime components and nodes.
 
 # Section 3.2: Initial System Decomposition
 
-`// midterm includes this section`
+`// midterm includes this section (inclusive)`
+
+## Overview
 
 A basic introduction into architectural styles:
 - repository
@@ -91,11 +93,9 @@ A basic introduction into architectural styles:
 - 3-tier
 - 4-tier
 
-A breakdown of the analysis object model into high-level subsystems, with UML component diagrams.
-
-## Overview
-
 Initial system decomposition establishes design goals based on non-functional requirements.
+
+A breakdown of the analysis object model into high-level subsystems, with UML component diagrams.
 
 ## Subsystems and Classes
 
@@ -113,12 +113,13 @@ In C/C++ related classes are grouped in a sub-directory.
 
 ![subsystems](../img/subsystems.png)
 
-**Class Interface:** set of public operations provided by a class.
+**Class Interface:** set of **public operations** provided by a **class**.
 
-**Subsystem Interface:** set of public operations provided by a subsystem.
+**Subsystem Interface:** set of **public operations** provided by a **subsystem**.
 - _a set of services_
 
-**Service:** related set of operations in a subsystem interface.
+**Service:** related **set of operations** in a **subsystem interface**.
+- subsystems offer services to other subsystems
 - _name must be a noun phrase_
 
 ## Services
@@ -128,10 +129,10 @@ In C/C++ related classes are grouped in a sub-directory.
 ## Coupling
 
 Coupling is the the number of dependencies (associations) between subsystems.
-- **loose coupling**
+- **loose coupling** [good]
   - subsystems are relatively independent
   - modifications to one subsystem have strong impact on the other
-- **strong coupling**
+- **strong coupling** [bad]
   - modifications to one subsystem have little impact on the other
   
 Subsystems should be as loosely coupled as possible
@@ -140,9 +141,9 @@ Subsystems should be as loosely coupled as possible
 ## Cohesion
 
 Cohesion refers to the number of dependencies (associations) within a subsystem.
-- **high cohesion**
+- **high cohesion** [good]
   - many objects in the subsystem are related to each other objects perform similar tasks
-- **low cohesion**
+- **low cohesion** [bad]
   - the subsystem contains many unrelated objects
 
 Subsystems should be as cohesive as possible; but this is a tradeoff with coupling.
@@ -154,25 +155,38 @@ A layer is a grouping of subsystems providing related services.
 - and have no knowledge of the higher-level layers
 
 **Closed Architecture:**
-- each layer can only access the immediate layers below
-- loose coupling
-- but introduces overhead
+- each layer can only access the **immediate layers below**
+  - loose coupling [good]
+  - but introduces overhead [bad]
 
 **Open Architecture:**
-- each layer can access any lower layer
+- each layer can access **any lower layer**
+  - higher coupling but no additional overhead
 
 ![layers](../img/layers.png)
 
 ## Partitions
 
-A group of peer subsystems, where each group is responsible for a set of unique services.
+Partitions are a **group of peer subsystems**, where **each group** is responsible for a **set of unique services**.
 - loosely coupled
 - groups can operate independently
 
+System decomposition is made up of partitioning and layering of subsystems.
+
 ## System Architecture Styles
 
+**Software architectural styles** are **ways of organizing / grouping subsystems** at the highest levels, and can be used as a basis for new systems.
+
 - **Repository**
-  - synchronized through locks (e.g. mutexes)
+  - subsystems:
+    - all access single data structure
+    - loosely coupled [good] + highly coupled [bad]
+    - communicate solely through repository [bottleneck]
+  - synchronized through repository locks (e.g. mutexes)
+  - good for:
+    - complex data processing
+    - adding new services
+  _- e.g. database management systems / compilers_
 - **MVC (model-view-controller)**
   - loose coupling between view and model
     - allows for multiple views with shared models
@@ -233,6 +247,8 @@ To **identify** subsystems:
   - ensure objects within a subsystem are related
 
 # Section 3.3 : Design Patterns
+
+`// post-midterm`
 
 Design patterns are sets of classes and their associations that provide a framework to solve common design problems. They should be robust, modifiable, and adaptable.
 

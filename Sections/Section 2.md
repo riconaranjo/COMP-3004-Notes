@@ -402,15 +402,31 @@ Control objects are used to coordinate boundary and entity objects:
 
 ### Identifying Aggregates
 
-`// todo: fill this out`
+**Aggregates** are the **_has-a_ relationship** between objects. There are two types of aggregation: composition and shared.
+
+**Composition:**
+- both objects are dependent on each other to exist
+- UML: ◆
+
+**Shared:**
+- both objects can exist independently
+- UML: ◇
 
 ### Identifying Attributes
 
-`// todo: fill this out`
+**Attributes** are **properties** of individual objects. They are with  a **name** and **data type**.
+- objects are not shown as attributes, only as associations
 
 ### Modelling State-Dependent Behaviour
 
-`// todo: fill this out`
+**Modelling state-dependent behaviour** is done to show the behaviour of a single object and perhaps identify new behaviour.
+
+**State machine diagrams** are used for long-lived objects with state-dependent behaviour, not for every object.
+- **almost always:** control objects
+- **sometimes:** entity objects
+- **almost never:** boundary objects
+
+![state-machine](../img/state-machine.png)
 
 ### Modelling Inheritance Relationships
 

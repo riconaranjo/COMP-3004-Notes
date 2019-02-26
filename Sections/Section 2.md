@@ -346,15 +346,48 @@ List these entity objects in a data-dictionary, with attributes, associations, a
 
 ### Identifying Boundary Objects
 
-`// todo: fill this out`
+**Boundary objects** are the **interface between actors and the system**. They collect information from the user, for use by control and entity objects.
+- e.g. buttons, forms (high-level), notifications
+
+**Identify by looking for:**
+- UI controls that initiate use-cases
+- forms used to gather information
+- messages used by the system
 
 ### Identifying Control Objects
 
-`// todo: fill this out`
+**Control objects** are used to m**anage the control flow of a single use-case**; they are created and destroyed within the single use-case.
+- a use-case may use multiple control objects
+  - one per actor
+
+Control objects are used to coordinate boundary and entity objects:
+- collecting **information** from **boundary objects**
+- **communicating** it to **entity** and other **control objects**
+
+**Identify by looking for:**
+- one control per actor in a use-case
+  - ensure control object life span is contained in the use-case
 
 ### Use-Case to Sequence Diagrams
 
-`// todo: fill this out`
+**Mapping use-case diagrams to sequence diagrams** is done **to uncover new objects** and **to identify new [object] operations**.
+
+**Sequence diagrams:**
+- are linked to a single use-case, and its participating objects
+- show use-case behaviour amongst objects
+  - model high-level object interactions
+
+**Strategy:**
+- leftmost column: initiating actor
+- second column: boundary object
+- third column: main control object
+- further columns:
+  - additional **control** objects **created** by **boundary** objects
+  - additional **boundary** objects **created** by **control** objects
+  - **entity** objects **accessed** by **control / boundary** objects
+    - _never the other way around_
+
+![sequence-2](../img/sequence-2.png)
 
 ### Identifying Associations
 

@@ -131,9 +131,9 @@ In C/C++ related classes are grouped in a sub-directory.
 Coupling is the the number of dependencies (associations) between subsystems.
 - **loose coupling** [good]
   - subsystems are relatively independent
-  - modifications to one subsystem have strong impact on the other
-- **strong coupling** [bad]
   - modifications to one subsystem have little impact on the other
+- **strong coupling** [bad]
+  - modifications to one subsystem have strong impact on the other
   
 Subsystems should be as loosely coupled as possible
 - e.g. the storage subsytem should not be dependent on database implementation type

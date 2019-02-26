@@ -186,23 +186,47 @@ System decomposition is made up of partitioning and layering of subsystems.
   - good for:
     - complex data processing
     - adding new services
-  _- e.g. database management systems / compilers_
+  - _e.g. database management systems / compilers_
 - **MVC (model-view-controller)**
-  - loose coupling between view and model
+  - loose coupling between view and model [good]
     - allows for multiple views with shared models
+  - maps well to entity-boundary-control objects
+    - _based on the observer design pattern_
 - **Client-Server**
+  - server subsystems provide services to client subsystems
+    - using remote procedure calls (RPC) + sockets
+  - client subsystems interact with users
+  - subsystems are independent (loose coupling) [good]
+    - good for distributed systems
   - synchronizes only with messages
+  - _special case of repository_
+  - _e.g. information system with central database_
 - **Peer-to-Peer**
   - generalization of client-server
+    - subsystems can be both clients or servers
+  - good for distributed systems
+  - synchronizes only with messages
   - higher risk of deadlock
+  - _e.g. database that accepts requests and notifies others of any changes_
 - **Three-Tier**
-- interface / application logic / storage layers
+  - interface / application logic / storage layers
+    - interface: boundary objects
+    - application logic: control / entity objects
+    - storage: implements storage and retrieval of persistent objects
+      - can be shared by multiple applications
+    - _like MVC but storage is external to application?_
 - **Four-Tier**
-- presentation client / presentation server / application logic / storage layers
+  - presentation client / presentation server / application logic / storage layers
+    - same as three-tier but application logic split:
+      - client layer [located on client hosts]
+      - server layer [located on server hosts]
+  - _e.g. facebook? different client interfaces for each user?_
 - **Pipe and Filter**
   - filters are subsystems
   - pipes are associations between subsystems
   - used for data streams (simple)
+  - bad for complex interactions between filters
+  - _e.g. bash shell_
 
 ## Design Goals
 

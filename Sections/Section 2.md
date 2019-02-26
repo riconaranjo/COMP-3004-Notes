@@ -430,8 +430,34 @@ Control objects are used to coordinate boundary and entity objects:
 
 ### Modelling Inheritance Relationships
 
-`// todo: fill this out`
+**Modelling inheritance relationships** is done to help generalize class attributes and behaviours.
+- UML: △
 
 ### Reviewing the Analysis Model
 
-`// todo: fill this out`
+The **final step** in requirement analysis is to review the analysis model for:
+- **correctness:**
+  - glossary is accurate and understandable
+  - abstract classes correspond to user-level concepts
+  - descriptions match user's defintions
+  - **entity / boundary** objects named with **noun-phrases**
+  - **use-cases + control** objects named with **verb-phrases**
+  - error-cases described and handled
+- **completeness:**
+  - each **object** is required by a use-case
+  - each **object** indicates which use-case(s) create / modify / destroy it
+  - each **object** is accessed by a boundary object
+  - each **attribute** indicates when set
+  - each **attribute** indicates its datatype
+  - each **attribute** is a qualifier
+  - each **association** indicates when it is traversed
+  - each **association** has a justified multiplicity
+  - each **association** indicates whether one-to-many / many-to-many are qualified
+  - each **control object** has the necessary associations for its use-case
+- **consistency:**
+  - unique class and use-case names
+  - similar names for similar concepts
+  - inheritances with objects with similar attributes and behaviour
+- **verifiability:**
+  - prototypes built for novel features
+  - performance and reliability requirements verified with prototypes on target hardware

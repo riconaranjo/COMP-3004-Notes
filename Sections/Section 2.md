@@ -391,7 +391,14 @@ Control objects are used to coordinate boundary and entity objects:
 
 ### Identifying Associations
 
-`// todo: fill this out`
+**Associations** are the **relationships between objects**; they **describe dependencies** and allow for the discovery of special cases.
+
+**Properties:**
+- **multiplicity:** range / number of instances
+- _**name:**_ optional, non-unique
+- _**role:**_ optional, purpose of class in the association
+
+![associations](../img/associations.png)
 
 ### Identifying Aggregates
 

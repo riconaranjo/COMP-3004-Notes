@@ -1,6 +1,6 @@
 # Section 3: High-Level System Design
 
-# Other Sections
+## Other Sections
 
 Section 1: [Introduction to Software Engineering](Section%201.md)<br>
 Section 2: [Requirement Analysis](Section%202.md)<br>
@@ -44,10 +44,10 @@ The main tasks are to:
 
 Two main parts:
 1. initial system decomposition
-  - grouping classes into subsystem
+    - grouping classes into subsystem
 2. refined system decomposition
-  - addressing design goals
-  - deciding on design strategies [high-level system]
+    - addressing design goals
+    - deciding on design strategies [high-level system]
 
 ### Initial System Decomposition
 

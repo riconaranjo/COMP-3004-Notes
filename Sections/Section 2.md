@@ -1,6 +1,6 @@
 # Section 2: Requirement Analysis
 
-# Other Sections
+## Other Sections
 
 Section 1: [Introduction to Software Engineering](Section%201.md)<br>
 Section 2: [Requirement Analysis](Section%202.md)<br>

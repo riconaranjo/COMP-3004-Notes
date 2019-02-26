@@ -145,13 +145,13 @@ The team leader ensures **things happen**.
 ## Unified Modelling Language
 
 **UML** is **a tool** for expressing **system models**:
-- _functional models_
+- **functional models**
   - case diagrams
-- _dynamic models_
+- **dynamic models**
   - state diagrams
   - sequence diagrams
   - activity diagrams
-- _object models_
+- **object models**
   - class diagrams
 
 It is used to **facilitate communication** between:

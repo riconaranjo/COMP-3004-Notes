@@ -1,13 +1,19 @@
 # Section 3: High-Level System Design
 
+# Other Sections
+
+Section 1: [Introduction to Software Engineering](Section%201.md)<br>
+Section 2: [Requirement Analysis](Section%202.md)<br>
+Section 3: [High-Level System Design](Section%203.md)<br>
+
+# Section 3.1: Overview
+
 1. Overview
 2. Initial System Decomposition`*`
 3. Design Patterns
 4. Refined System Decomposition
 
 `// * midterm will cover up to here`
-
-# Section 3.1: Overview
 
 ## Purpose
 

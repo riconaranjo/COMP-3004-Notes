@@ -5,7 +5,7 @@
 3. Design Patterns
 4. Refined System Decomposition
 
-`// *midterm will cover up to here`
+`// * midterm will cover up to here`
 
 # Section 3.1: Overview
 
@@ -80,6 +80,8 @@ This phase establishes the runtime components and nodes.
   - system architecture strategies
 
 # Section 3.2: Initial System Decomposition
+
+`// midterm includes this section`
 
 A basic introduction into architectural styles:
 - repository

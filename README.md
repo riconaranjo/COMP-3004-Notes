@@ -2,7 +2,7 @@
 
 📘 My notes for my Object-Oriented Software Engineering (CS) course – written in markdown.
 
-This course covers the entire software development process, from the initial design phases up to but not including the testing and deployment phases.
+This course covers the entire software development process, from the high-level system design phase up to the implementation and testing phases.
 
 # Table of Contents
 

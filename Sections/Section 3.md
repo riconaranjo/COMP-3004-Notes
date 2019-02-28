@@ -6,6 +6,13 @@ Section 1: [Introduction to Software Engineering](Section%201.md)<br>
 Section 2: [Requirement Analysis](Section%202.md)<br>
 Section 3: [High-Level System Design](Section%203.md)<br>
 
+## Section Table of Contents
+
+Section 3.1: [Overview](#section-3.1-overview)
+Section 3.2: [Initial System Decomposition](#section-3.2-initial-system-decomposition)
+Section 3.3: [Design Patterns](#section-3.3-design-patterns)
+Section 3.4: [Refined System Decomposition](#section-3.4-refined-system-decomposition)
+
 # Section 3.1: Overview
 
 1. Overview
@@ -276,7 +283,7 @@ To **identify** subsystems:
 - minimize associations between subsystems
   - ensure objects within a subsystem are related
 
-# Section 3.3 : Design Patterns
+# Section 3.3: Design Patterns
 
 `// post-midterm`
 
@@ -332,4 +339,174 @@ In this picture, the store would be the abstraction, and the concrete implemento
 
 ## Composite
 
-`// todo finish this`
+`// todo: finish this`
+
+## Façade
+
+`// todo: finish this`
+
+## Proxy
+
+`// todo: finish this`
+
+## Command
+
+`// todo: finish this`
+
+## Strategy
+
+`// todo: finish this`
+
+# Section 3.4: Refined System Decomposition
+
+**Refined system decomposition** is used to group subsystems into components and nodes, by identifying:
+- **persistent data**
+- **access / global** control flow mechanisms
+- **boundary conditions**
+- subsystem **services and interfaces**
+
+**Control Flow:** used for control and concurrency<br>
+**Boundary conditions:** system initialization / shutdown + edge cases
+
+## Components and Nodes
+
+`// todo: finish this`
+
+**Components:** <br>
+**Runtime components:** <br>
+**Node:** <br>
+**UML notation:** <br>
+**System:**
+
+![uml-deployment](../img/uml-deployment.png)
+
+## Refined Decomposition Activities
+
+- Mapping subsystems to components
+- Storing persistent data
+- Providing access control
+- Designing global control flow
+- Identifying services
+- Identifying boundary conditions
+
+## Mapping Subsystems to Components
+
+`// todo: finish this`
+
+![uml-deployment-advanced](../img/uml-deployment-advanced.png)
+
+## Storing Persistent Data
+
+`// todo: finish this`
+
+### Trade-Offs
+
+**Flat files:**
+- ...
+
+_**Databases:**_
+- ...
+
+**Relation databases:**
+- ...
+
+**OO databases:**
+- ...
+
+## Providing Access Control
+
+`// todo: finish this`
+
+**Access control** is what determines what actors have access to what information.
+- _e.g. authentication / confidentiality / authorization_
+
+**Authentication:**
+- ...
+
+**Confidentiality:**
+- ...
+- always use (consumer-off-the-shelf software
+
+**Authorization:**
+- ...
+- always use (consumer-off-the-shelf software)
+
+### Access Matrix
+
+`// todo: finish this`
+
+**Global access table:**
+- ...
+
+**Global access table:**
+- ...
+
+**Capability:**
+- ...
+
+![access-matrix](../img/access-matrix.png)
+
+### Rule-Based Access Matrix
+
+A **rule-based access matrix** is a compact representation, used when there are many actors and class; it can show access rules between broad categories of actors and classes.
+
+![access-matrix-rule](../img/access-matrix-rule.png)
+
+### Access Control Types
+
+`// todo: finish this`
+
+**Static access control:**
+- ...
+
+**Dynamic access control:**
+- ...
+
+![access-matrix-arena](../img/access-matrix-arena.png)
+
+## Design Global Control Flow
+
+`// todo: finish this`
+
+**Control flow** is the content and order of operations.
+
+_**Control flow mechanisms:**_
+- **Procedure-driven:**
+- **Event-driven:**
+- **Threads:**
+
+**Control objects:** are used to...
+
+## Identifying Services
+
+`// todo: finish this`
+
+To **identify services** start by reviewing subsystem dependencies, and then define an interface for each service in each of the subsystems.
+
+![identifying-services](../img/identifying-services.png)
+
+## Identifying Boundary Conditions
+
+`// todo: finish this`
+
+**Steady state:**
+- ...
+
+**Boundary conditions:**
+- ...
+
+**Exceptions:**
+- ...
+
+**Role of exception handling:**
+- ...
+
+### Strategy
+
+To **identify boundary use-cases**  ...
+- _there needs to be an administration use-case to create objects such as **administrator user**_
+
+![boundary-use-case](../img/boundary-use-case.png)
+![boundary-use-case2](../img/boundary-use-case2.png)
+
+`// todo: work in progress`

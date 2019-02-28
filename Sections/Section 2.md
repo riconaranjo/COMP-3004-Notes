@@ -6,6 +6,12 @@ Section 1: [Introduction to Software Engineering](Section%201.md)<br>
 Section 2: [Requirement Analysis](Section%202.md)<br>
 Section 3: [High-Level System Design](Section%203.md)<br>
 
+## Section Table of Contents
+
+Section 2.1: [Overview](#section-2.1-overview)
+Section 2.2: [Requirements Elicitation](#section-2.2-requirements-elicitation)
+Section 2.3: [Analysis](#section-2.3-analysis)
+
 # Section 2.1: Overview
 
 ## Purpose
@@ -28,7 +34,7 @@ The **role of development team**, in the requirement analysis is to **understand
 
 ## Breakdown
 
-### Requirement Elicitation
+### Requirements Elicitation
 
 - first gather a detailed + complete set of requirements
   - from clients information
@@ -38,7 +44,7 @@ The **role of development team**, in the requirement analysis is to **understand
     - from user's point of view
     - including functions + non-functional requirements
 
-### Requirement Analysis
+### Requirements Analysis
 
 - create high-level model
   - given the requirements
@@ -47,12 +53,12 @@ The **role of development team**, in the requirement analysis is to **understand
   - non-technical
   - _state machine / sequence activity diagrams_
 
-## Requirement Elicitation
+# Section 2.2: Requirements Elicitation
 
 **Elicitation:** getting information from the client, for the development team.<br>
 **Requirements:** what the client wants the system to do (i.e. features / tasks), and design constraints.
 
-### Types of Requirements
+## Types of Requirements
 **Functional:** what the system does (not how)
 - features
 - tasks
@@ -62,7 +68,7 @@ The **role of development team**, in the requirement analysis is to **understand
 - non-functional aspects of the system...
 - specific + testable
 
-### Non-Functional Requirements (NFR)
+## Non-Functional Requirements (NFR)
 Main categories:
 - usability
   - ease of use (colour scheme)
@@ -77,9 +83,9 @@ Main categories:
   - maintainability
   - portability
 
-## Requirement Specification
+## Requirements Specification
 
-**Requirement specification:** is a system definition that the client understands, that serves as a contract between the client and the development team.
+**Requirements specification:** is a system definition that the client understands, that serves as a contract between the client and the development team.
 - they are **complete / consistent / unambiguous**
 - includes functional requirements
   - embodied in the functional model
@@ -87,7 +93,7 @@ Main categories:
 
 ## Traceability
 
-**Every requirement tracked** through development lifecycle (use-cases -> system functions -> test cases)
+**Every requirement is tracked** through development lifecycle (use-cases -> system functions -> test cases)
 - all **dependencies documented**
 - facilitates maintenance of project
   - change impact easier to assess
@@ -133,7 +139,7 @@ completeness
 - initial analysis objects
 - non-functional requirements
 
-### Identifying Actors
+## Identifying Actors
 
 **An actor** is an entity that **interacts** with the system; they are **role abstraction**.
 - e.g. people / users
@@ -146,7 +152,7 @@ completeness
 
 Actors are useful for **defining the system boundaries**.
 
-### Identifying Scenarios
+## Identifying Scenarios
 
 **A scenario** is a _**component**_ of a **use-case** that describes the system as **user interactions**; they describe a **single feature** from the **point of view** of a user.
 
@@ -167,7 +173,7 @@ The goal is to **identify**:
 - **information** created / accessed / modified by actors
 - **interactions** between actors + system
 
-### Identifying Use-Cases
+## Identifying Use-Cases
 
 **A use-case** is a **set of scenarios** that describes user / system interactions, **initiated by an actor**; it distinguishes user steps / system steps.
 
@@ -178,13 +184,13 @@ They can be identified by using generalized high-level scenarios and asking clie
 - feature details
 - constraints
 
-#### High-Level Use-Case Diagram
+### High-Level Use-Case Diagram
 
 ![high-level-use-case](../img/high-level-use-case.png)
 
 `// high-level use-case diagrams contained in a box`
 
-#### Detailed Use-Case Diagram
+### Detailed Use-Case Diagram
 
 ![detailed-use-case](../img/detailed-use-case.png)
 
@@ -207,11 +213,11 @@ Use-cases are represented with:
   - there should be no mapping to menu navigation
     - button presses are not states
 
-#### Table-Based Description
+### Table-Based Description
 
 ![table-description](../img/table-description.png)
 
-### Identifying Relationships
+## Identifying Relationships
 
 **Relationships:**
 - between actors and use-cases:
@@ -252,7 +258,7 @@ Use-case relationships are represented using:
 
 ![inheritance](../img/inheritance.png)
 
-### Identifying Initial Analysis Objects
+## Identifying Initial Analysis Objects
 **Initial analysis objects** are the main **participating objects** present in the system (i.e. objects in the use-case).
 - identified by using use-cases to find:
   - recurring nouns
@@ -261,7 +267,7 @@ Use-case relationships are represented using:
 
 These objects are then collected in a glossary / data-dictionary.
 
-### Identifying Non-Functional Requirements
+## Identifying Non-Functional Requirements
 
 **Non-functional requirements** are user-visible constraints, used to document the client's needs; they are used to help prioritize conflicting requirements.
 
@@ -362,7 +368,7 @@ List these entity objects in a data-dictionary, with attributes, associations, a
 
 ### Identifying Control Objects
 
-**Control objects** are used to m**anage the control flow of a single use-case**; they are created and destroyed within the single use-case.
+**Control objects** are used to **manage the control flow of a single use-case**; they are created and destroyed within the single use-case.
 - a use-case may use multiple control objects
   - one per actor
 

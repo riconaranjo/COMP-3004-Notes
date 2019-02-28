@@ -6,6 +6,12 @@ Section 1: [Introduction to Software Engineering](Section%201.md)<br>
 Section 2: [Requirement Analysis](Section%202.md)<br>
 Section 3: [High-Level System Design](Section%203.md)<br>
 
+## Section Table of Contents
+
+Section 1.1: [Overview](#section-1.1-overview)
+Section 1.2: [Team Project](#section-1.2-team-project)
+Section 1.3: [UML Notation](#section-1.3-uml-notation)
+
 # Section 1.1: Overview
 
 **Software Engineering:**
@@ -69,10 +75,10 @@ One software engineering process that has two components:
 
 ## Management Aspects
 
-> **Communication tools:** notations, tools, programming conventions<br>
-> **Configuration management:** version control<br>
-> **Rationale management:** why did who make what decision when and how<br>
-> **Software development processes:** sequential, iterative, Agile
+**Communication tools:** notations / tools / programming conventions<br>
+**Configuration management:** version control<br>
+**Rationale management:** who / why / when decision were taken<br>
+**Software development processes:** sequential / iterative / agile
 
 ## Software Development Phases
 
@@ -91,9 +97,9 @@ One software engineering process that has two components:
 ## Software Development Products
 
 **Work Product:** unit of work (e.g. diagrams / source code / etc)
-- _functional model:_ system from user's point of view
-- _dynamic model:_ internal system behaviour from user's point of view
-- _object model:_ system objects / attributes / operations
+- **functional model:** system from user's point of view
+- **dynamic model:** internal system behaviour from user's point of view
+- **object model:** system objects / attributes / operations
 
 **Deliverable:** work product delivered to client
 
@@ -160,9 +166,9 @@ The team leader ensures **things happen**.
 - **object models**
   - class diagrams
 
-It is used to **facilitate communication** between:
-- clients + development team
-- within development team
+It is used to **facilitate communication**:
+- between **clients + development** team
+- **within** development team
 
 ## Case Diagrams
 
@@ -186,8 +192,11 @@ A **finite state machine** diagram is a **graphical** representation of an objec
 
 ![state-diagram](../img/state-diagram.png)
 
-**state:** a particular set of attributes for an object
-**transition:** conditions which change an object's state
+**State:** a particular set of attributes for an object.
+- **Start state** is a black circle.
+- **End state** is a black circle surrounded with a concentric circle.
+
+**Transition:** conditions which change an object's state.
 
 ## Activity Diagrams
 
@@ -204,6 +213,9 @@ A **sequence diagram** is a **graphical** representation of **messages** between
   - every **sequence diagram** describes behaviour of **one use-case**
 
 ![sequence-diagram](../img/sequence-diagram.png)
+
+Objects **creation** shown with an action `<<creates>>`.<br>
+Objects **destruction** shown with an X.
 
 ## Packages
 

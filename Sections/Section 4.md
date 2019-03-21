@@ -174,17 +174,17 @@ What is OCL?
 - it’s a formal language to specify constraints
 
 How is OCL used?
-- may be used for constraints on: 
+- may be used for constraints on:
   - single model elements
-    - attributes, operations, classes 
+    - attributes, operations, classes
   - groups of model elements
-    - associations, participating classes 
+    - associations, participating classes
 - syntax is Pascal-like
 - represents constraints as boolean expressions
 
 ``` go
 # `=` is comparison
-1 = 2 
+1 = 2
 # => false
 
 # `=:` is assignment

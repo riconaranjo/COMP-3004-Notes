@@ -16,65 +16,185 @@ Section 4.4: [Refined System Decomposition](#section-4.4-refined-system-decompos
 
 # Section 4.1: Overview
 
+**Detailed object design** creates an object model that contains the solution domain.
+- by identifying solution domain objects
+- using:
+  - **analysis object model**
+  - **subsystem design model**
+    - subsystem decomposition
+    - system architecture strategies
+
+## Tasks
+
+1. Identify opportunities for **software reuse**
+  - COTS components
+  - design patterns
+2. Specify **services**
+  - interface specification
+  - this becomes the API
+3. **Restructure** object model
+  - for _understandability + maintainability_
+4. **Optimize** object model
+  - for _performance requirements_
+
+`// COTS: common-off-the-shelf`<br>
+`// API: application programming interface`
+
 # Section 4.2: Reusing Pattern Solutions
 
-- Reusing already exiting tools/frameworks/subsystems is faster and cheaper than designing form scratch
-- allows for
-  - modifiability
-  - extensibility
+**Reusing** already exiting tools / frameworks / subsystems is **faster and cheaper** than designing form scratch.
+- this allows for **modifiability + extensibility**
+
+**Major Design Patterns:** creational, structural, behavioural
 
 ## Application and Solution Objects
-What are application objects?
-- also known as domain objects
-- they represent concepts from the application domain
-- they must be relevant to the system
 
-What are solution objects?
-- objects specific to the solution domain
+**Application objects** _(domain objects)_ represent concepts from the application domain.
+
+**Solution objects** represent objects specific to the solution domain
 - they do not have an application domain counterpart
-- for example: persistent data stores, UI objects
+  - _e.g. persistent data stores, UI objects_
 
 ## Specification and Implementation Inheritance
 
-In c++ one has many inheritance tools at their disposal.
+`// todo: finish this - slide 7`
+
+In C++ one has many inheritance tools at their disposal.
 - All inheritance relationships should be within the same subsystem, since inheritance is _"the strongest"_ relationship two classes can have.
 
 Focus of inheritance in analysis phase
-- set up generalization/specialization taxonomy
+- set up generalization / specialization taxonomy
 
-## Specification and Implementation Inheritance
-What is implementation inheritance?
-- not an “is-a” relationship
+**Specification Inheritance:**
+- _classic inheritance_
+
+**Implementation Inheritance:**
+- **not** an **“is-a”** relationship
 - use of inheritance purely for purposes of code reuse
 - superclass functionality is reused by:
-  - sub-classing
-  - refining behaviour
+  - _sub-classing_
+  - _refining behaviour_
 - quick and dirty way to reuse operations
   - usually results in unintended consequences
-  - you get more than you bargained for
 - not an intuitive use of inheritance
 
 ### Example:
-> When creating a class named _MyStack_ which is a FIFO stack implementation that uses the c++ vector implementation, the programmer is presented with 2 choices:
+
+> When creating a class named _MyStack_ which is a FIFO stack implementation that uses the C++ vector implementation, the programmer is presented with 2 choices:
+>
 > 1. Compose MyStack with Vector
 > 2. Make MyStack inherit from Vector (implementation inheritance)
-> 
+>
 > If option 2 was chosen it would likely yield the unwanted consequence of inheriting all the Vector methods from Vector onto MyStack (even through MyStack shouldn't support those operations)
+
+## Delegation
+
+`// todo: finish this - slide 11`
+
+**Delegation** is an alternative to _implementation inheritance_ which relays messages to another class.
+- this makes **dependencies explicit**
+  - between new and reused classes
+- relationship becomes an **aggregation** relationship
+  - _instead of inheritance_
+
+![delegation](../img/delegation.png)
 
 ## Liskov Substitution Principle
 
-**What is this principle?**
+**Definition:**
 - assume T is a superclass and S is a subclass of T
-- “if an object of type S can be substituted in all places where an object of type T is expected, then S is a subtype of T”
+- _"if an object of type S can be substituted in all places where an object of type T is expected, then S is a subtype of T"_
 
-Consequences:
+`// in other words:` **`polymorphism`**
+
+**Consequences:**
 - an operation on T can be called on instances of S, without knowing that it is called on a subclass instance
 - client classes using operations on T don’t have to change when new subclasses of T are added
 
-Strict inheritance
+**Strict Inheritance:**
 - when all inheritance associations are specification inheritance
 
 _In essence, wherever one can use *polymorphism*, strict inheritance is present_
+
+## Delegation and Inheritance in Design Patterns
+
+`// todo: finish this - slide 14`
+
+## Reuse Activities
+
+`// todo: finish this - slide 15`
+
+Due to frequent changes during the development phase caused by:
+- vendor...
+
+## Encapsulating Data Sources
+
+`// todo: finish this - slide 19`
+
+Bridge
+
+## Encapsulating Legacy Components
+
+`// todo: finish this - slide 20`
+
+Adapter
+
+## Encapsulating Context
+
+`// todo: finish this - slide 21`
+
+Strategy
+
+## Encapsulating Platforms
+
+`// todo: finish this - slide 22`
+
+Abstract factory
+
+## Encapsulating Control Flow
+
+`// todo: finish this - slide 25`
+
+Command
+
+## Encapsulating Hierarchies
+
+`// todo: finish this - slide 26`
+
+Composite
+
+## Maintaining Consistency
+
+`// todo: finish this - slide 27`
+
+Observer
+
+## Heuristics for Selecting Design Patterns
+
+`// todo: finish this - slide 28`
+
+Abstract Factory
+- manufacturer independence
+- platform independence
+
+Adapter
+- compliance with existing interface
+- reuse of existing legacy component
+
+Bridge
+- support for future protocols
+
+Command
+- all commands should be logged
+- all commands should be reversible
+
+Composite
+- support for aggregate structures
+- hierarchies of variable depth and width
+
+Strategy
+- decoupling of policy and mechanisms
+- interchanges of algorithms at runtime
 
 # Section 4.3 Specifying Interfaces
 
@@ -148,7 +268,7 @@ t.getMaxNumPlayers() > 0
 
 #### Example
 > example of precondition for acceptPlayer() operation:
-> - player must not already be accepted, and the current number of players must be less than the maximum 
+> - player must not already be accepted, and the current number of players must be less than the maximum
 > - given a Tournament object t and player p:
 
 ```pascal

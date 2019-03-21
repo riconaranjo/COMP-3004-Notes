@@ -8,10 +8,10 @@ Section 3: [High-Level System Design](Section%203.md)<br>
 
 ## Section Table of Contents
 
-Section 3.1: [Overview](#section-3.1-overview)
-Section 3.2: [Initial System Decomposition](#section-3.2-initial-system-decomposition)
-Section 3.3: [Design Patterns](#section-3.3-design-patterns)
-Section 3.4: [Refined System Decomposition](#section-3.4-refined-system-decomposition)
+Section 3.1: [Overview](#section-3.1-overview)<br>
+Section 3.2: [Initial System Decomposition](#section-3.2-initial-system-decomposition)<br>
+Section 3.3: [Design Patterns](#section-3.3-design-patterns)<br>
+Section 3.4: [Refined System Decomposition](#section-3.4-refined-system-decomposition)<br>
 
 # Section 3.1: Overview
 
@@ -321,7 +321,7 @@ Notice how
 
 ## Adapter
 
-An **Adapter** design pattern exists as a wrapper around existing / legacy code to provide a new interface to the client.
+An **adapter** design pattern exists as a wrapper around existing / legacy code to provide a new interface to the client.
 - _e.g. new user interface for an old command line application_
 
 `// only works if it's a wrapper for existing code`

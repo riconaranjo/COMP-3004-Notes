@@ -1,12 +1,12 @@
 # Section 1: Introduction to Software Engineering
 
-## Other Sections
+## Sections Table of Contents
 
 Section 1: [Introduction to Software Engineering](Section%201.md)<br>
 Section 2: [Requirement Analysis](Section%202.md)<br>
 Section 3: [High-Level System Design](Section%203.md)<br>
 
-## Section Table of Contents
+## Section 1 Table of Contents
 
 Section 1.1: [Overview](#section-1.1-overview)<br>
 Section 1.2: [Team Project](#section-1.2-team-project)<br>

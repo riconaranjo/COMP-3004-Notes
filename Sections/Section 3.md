@@ -1,12 +1,13 @@
 # Section 3: High-Level System Design
 
-## Other Sections
+## Sections Table of Contents
 
 Section 1: [Introduction to Software Engineering](Section%201.md)<br>
 Section 2: [Requirement Analysis](Section%202.md)<br>
 Section 3: [High-Level System Design](Section%203.md)<br>
+Section 3: [Detailed Object Design](Section%204.md)<br>
 
-## Section Table of Contents
+## Section 3 Table of Contents
 
 Section 3.1: [Overview](#section-3.1-overview)<br>
 Section 3.2: [Initial System Decomposition](#section-3.2-initial-system-decomposition)<br>

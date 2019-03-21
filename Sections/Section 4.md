@@ -198,11 +198,12 @@ Strategy
 
 # Section 4.3 Specifying Interfaces
 
-**Goal:**
-- specify boundaries between objects
-- integrate all existing, partial models into one coherent whole
+`// todo: finish this section`
 
-Steps
+**Specifying interfaces** is focused on specifying **boundaries between objects**.
+- integrating all existing / partial models into one coherent whole
+
+**Steps:**
 - Identify missing attributes and operations
   - augment object design model
 - specify visibility and signatures
@@ -212,48 +213,59 @@ Steps
   - describe object and operation behaviour in terms of constraints
 
 ## Class Developer Roles (Part of Contracts)
-Three roles
-- class implementer (person who writes the code)
-- class user
-- class extender
+
+**Class Developers** have three possible roles:
+- class **implementer**
+- class **user**
+- class **extender**
+
+![developer-roles](../img/developer-roles.png)
 
 ### Class Implementer
 
+The **class implementer writes** the class.
 - implements the class
 - designs the internal data structures
 - implements the code for the operations
 - designs the interface specification
 
 ### Class User
+
+The **class implementer uses** the class from another class.
 - invokes the class operations from another class, called the client class
 - uses the interface specification as boundary to the class
 
 ### Class Extender
+
+The **class implementer writes** the class code.
 - develops specializations of the class
 - uses interface specification as indication of:
   - the behaviour of the class
   - the constraints on the class
 
 ## Contracts
-What is a contract?
-- specifies constraints on a class that:
-  - must be ensured by:
+
+A **contract species constraints** on a class that:
+  - must be **ensured** by:
     - class implementer
     - class extender
-  - must be met by:
+  - must be **met** by:
     - class user
 
-Contracts include three types of constraints:
-- invariant
-- precondition
-- postcondition
+Contracts include **three types of constraints**:
+- _invariant_
+- _precondition_
+- _postcondition_
 
-### What is an _invariant_?
-- predicate that is always true for all instances of a class
+### What is an _Invariant_?
+
+- predicate that is **always true for all instances** of a class
 - associated with a class or an interface
 - used to specify consistency constraints among attributes
+- _e.g. client age cannot be negative_
 
 #### Example:
+
 > maximum number of players in tournament must be greater than 0
 > given a Tournament object t:
 
@@ -262,11 +274,13 @@ t.getMaxNumPlayers() > 0
 ```
 
 ### What is an _precondition_?
-- predicate that must be true before an operation is invoked
+
+- predicate that **must be true before an operation** is invoked
 - associated with an operation
 - used to specify constraints that class user must meet before invoking the operation
 
 #### Example
+
 > example of precondition for acceptPlayer() operation:
 > - player must not already be accepted, and the current number of players must be less than the maximum
 > - given a Tournament object t and player p:
@@ -275,8 +289,9 @@ t.getMaxNumPlayers() > 0
 !t.isPlayerAccepted(p) and t.getNumPlayers() < t.getMaxNumPlayers()
 ```
 
-### What is an postcondition?
-- predicate that must be true after an operation executes
+### What is an _postcondition_?
+
+- predicate that **must be true after an operation** executes
 - associated with an operation
 - used to specify constraints that class implementer and extender must ensure after execution
 
@@ -287,18 +302,19 @@ t.getMaxNumPlayers() > 0
 
 ``` pascal
 t.getNumPlayers_afterAccept() = t.getNumPlayers_beforeAccept() + 1
+// => true if (t.getNumPlayers_beforeAccept() + 1) succeeds
 ```
 
-## Object Constraint Language
-What is OCL?
-- it’s a formal language to specify constraints
+`// ()=) operator is logical comparison in pascal`
 
-How is OCL used?
+## Object Constraint Language
+
+**Object Constraint Language** [OCL] is a **formal language to specify constraints**.
 - may be used for constraints on:
   - single model elements
-    - attributes, operations, classes
+    - _attributes / operations / classes_
   - groups of model elements
-    - associations, participating classes
+    - associations / participating classes
 - syntax is Pascal-like
 - represents constraints as boolean expressions
 
@@ -312,3 +328,20 @@ a = 1
 a
 # => 1
 ```
+
+![ocl](../img/ocl.png)
+
+## OCL Collections
+
+**Constraints** are based on navigation along associations:
+
+1. **local attribute**
+  - uses local attribute
+2. **directly related class**
+  - uses a single association
+3. **indirectly related class**
+  - uses a series of indirect associations
+
+## OCL Qualifiers
+
+## Interface Specification Activities

@@ -5,7 +5,9 @@
 Section 1: [Introduction to Software Engineering](Section%201.md)<br>
 Section 2: [Requirement Analysis](Section%202.md)<br>
 Section 3: [High-Level System Design](Section%203.md)<br>
-Section 3: [Detailed Object Design](Section%204.md)<br>
+Section 4: [Detailed Object Design](Section%204.md)<br>
+Section 5: [Implementation](Section%205.md)<br>
+Section 6: [Testing](Section%206.md)<br>
 
 ## Section 4 Table of Contents
 
@@ -296,7 +298,7 @@ t.getMaxNumPlayers() > 0
 - used to specify constraints that class implementer and extender must ensure after execution
 
 #### Example
-> example of precondition for acceptPlayer() operation:
+> example of postcondition for acceptPlayer() operation:
 > - accepting a player must increase the player count by 1
 > - given a Tournament object t and player p:
 
@@ -344,4 +346,36 @@ a
 
 ## OCL Qualifiers
 
+`// todo: finish this - slide 22`
+
 ## Interface Specification Activities
+
+1. Identifying missing attributes and operations
+2. Specifying types, signatures, visibility
+3. Specifying preconditions and postconditions
+4. Specifying invariants
+5. Inheriting contracts
+
+## Identifying Missing Attributes and Operations
+
+`// todo: finish this - slide 23`
+
+## Specifying Preconditions and Postconditions
+
+`// todo: finish this - slide 26`
+
+## Specifying Invariants
+`// todo: finish this - slide`
+
+**Heuristics:** (on specifying invariants)
+- focus on the lifetime of the class
+- avoid any constraints
+  - specific to operations
+  - specific to certain states
+
+## Recap
+`// todo: finish this - slide`
+
+Constructing the detailed object model.
+
+About extending the object model and adding details to the initial object model.

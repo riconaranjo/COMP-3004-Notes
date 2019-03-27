@@ -1,4 +1,4 @@
-# Section 6: Detailed Object Design
+# Section 6: Testing
 
 ## Sections Table of Contents
 

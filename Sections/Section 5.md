@@ -12,12 +12,10 @@ Section 6: [Testing](Section%206.md)<br>
 ## Section 5 Table of Contents
 
 Section 5.1: [Overview](#section-5.1-overview)<br>
-Section 5.2: [Implementation](#section-5.2-implementation)<br>
-Section 5.3: [Mapping to Collections](#section-5.3-mapping-to-collections)<br>
-Section 5.4: [Mapping to Storage](#section-5.4-mapping-to-storage)<br>
+Section 5.2: [Mapping to Collections](#section-5.2-mapping-to-collections)<br>
+Section 5.3: [Mapping to Storage](#section-5.3-mapping-to-storage)<br>
 
 # Section 5.1: Overview
-
 `// fill this out`
 
 ## Model Transformation
@@ -41,8 +39,8 @@ Section 5.4: [Mapping to Storage](#section-5.4-mapping-to-storage)<br>
 ## Mapping Contracts
 `// fill this out`
 
-# Section 5.2: Implementation
-`// fill this out - slide 2`
+# Section 5.2: Mapping to Collections
+`// fill this out - overview`
 
 ## Mapping Association
 `// fill this out`
@@ -69,7 +67,7 @@ Section 5.4: [Mapping to Storage](#section-5.4-mapping-to-storage)<br>
 `// fill this out`
 
 # Section 5.3: Mapping to Collections
-`// fill this out`
+`// fill this out - overview`
 
 ## Relational Database Concepts
 `// fill this out`
@@ -85,5 +83,3 @@ Section 5.4: [Mapping to Storage](#section-5.4-mapping-to-storage)<br>
 
 ## Implementation Recap
 `// fill this out`
-
-# Section 5.4: Mapping to Storage

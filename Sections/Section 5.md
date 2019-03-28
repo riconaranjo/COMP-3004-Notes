@@ -81,5 +81,17 @@ Section 5.3: [Mapping to Storage](#section-5.3-mapping-to-storage)<br>
 ## Mapping Inheritance Relationships
 `// fill this out`
 
+### Vertical Mapping [modifiability]
+- each class has its own table
+  - e.g. one for super class + one for sub class
+- each to modify / add attributes
+- access time is slow due to many tables
+
+### Horizontal Mapping [performance]
+- duplicates superclass columns for each subclass
+- any schema modifications are complex
+- queries are faster
+  - especially when dealing with deep inheritance
+
 ## Implementation Recap
 `// fill this out`

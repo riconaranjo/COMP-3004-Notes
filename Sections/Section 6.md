@@ -18,7 +18,7 @@ Section 6.4: [System Testing](#section-6.4-system-testing)<br>
 
 # Section 6.1: Overview
 
-**Unit Testing:** for black-box / white-box testing<br>
+**Unit Testing:** for blackbox / whitebox testing<br>
 **Integration Testing:** selecting testing integration strategy, and for stubs and driver test cases<br>
 **System Testing:** for test cases based on functional model
 
@@ -33,7 +33,7 @@ Section 6.4: [System Testing](#section-6.4-system-testing)<br>
 - software reliability
 - code reviews
 - testing approach
-- black-box / white-box testing
+- blackbox / whitebox testing
 - faults / error states / failures
 - test cases
 - test stubs and drivers
@@ -65,7 +65,7 @@ Section 6.4: [System Testing](#section-6.4-system-testing)<br>
 - testing how components work together
 - including structural testing – all components together
 
-### Black-box / White-box Testing
+### blackbox / whitebox Testing
 `// fill this out`
 
 A **test component** is a part of the system that is isolated for testing.
@@ -73,13 +73,13 @@ A **test component** is a part of the system that is isolated for testing.
   - object(s)
   - subsystem(s)
 
-**Black-box:** testing output based on input
+**blackbox:** testing output based on input
 - no access to internal components<br>
-**White-box:** testing internal components
+**whitebox:** testing internal components
 - testing dynamic model states
   - and object interactions
 
-`Unit testing includes: black-box + white-box tests`
+`Unit testing includes: blackbox + whitebox tests`
 
 ### Faults / Error States / Failures
 `// fill this out`
@@ -231,14 +231,36 @@ Then start test layers together until you have full integration of the three lay
 # Section 6.4: System Testing
 `// fill this out`
 
+A use-case is an abstraction of a scenario
+- a scenario is an _'instance'_ use-case
+
 ## Functional Testing
 `// fill this out`
+
+- testing functional requirements
+- blackbox
 
 ## Performance Testing
 `// fill this out`
 
+- **stress testing:**
+- **volume testing:**
+- **security testing:**
+- **timing testing:**
+- **recovery testing:** ability to recover from error states
+
 ## Acceptance Testing
 `// fill this out`
+
+**Alpha testing:** field test in development environment<br>
+**Beta testing:** field test in target environment
+
+**Benchmark testing:** selected users test for system requirements<br>
+**Competitor testing:** system is tested against another product<br>
+**Shadow testing:** new and legacy systems executed in parallel
+
+**Installation testing:** testing system installation on target environment
+- functional / performance testing are repeated
 
 ## Testing Recap
 `// fill this out`

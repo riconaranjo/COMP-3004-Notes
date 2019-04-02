@@ -148,29 +148,85 @@ A **correction** is a modification to repair a fault in a tested component.
 # Section 6.3: Integration Testing
 `// fill this out - overview`
 
+**Focus:** testing small group of already unit-tested components.
+- allows for more complex tests
+
+**Optimal:** All tests in parallel<br>
+**Horizontal:** testing according to **layers**<br>
+**Horizontal:** testing according to **functionality**
+
 ## Horizontal Integration
 `// fill this out`
 
 ### Big Bang Testing
 `// fill this out`
 
+Unit test every component individually.
+- then test them all together
+- difficult to determine which / where components fail
+
 ### Bottom-Up Testing
 `// fill this out`
+
+Start with **bottom** layer components.
+- then test with one layer **up**
+  - and so on
+- only requires test **drivers**
 
 ### Top-Down Testing
 `// fill this out`
 
+Start with **top** layer components.
+- then test with one layer **down**
+  - and so on
+- only requires test **stubs**
+
 ### Bottom-Up vs. Top-Down Testing
 `// fill this out`
+
+**Bottom-up:**
+- advantage: _interface faults found more easily_
+- disadvantage: _UI faults found last_
+
+**Top-down:**
+- advantage: _UI faults found first_
+- disadvantage: _requires many test stubs_
 
 ### Sandwich Testing
 `// fill this out`
 
+A **combination** of top-down and bottom-up approaches.
+- means there are **no unit tests**
+- **no test drivers / test stubs** required
+
+**The system is divided into:**
+- target layer
+- layer above target
+- layer below target
+
 ### Modified Sandwich Testing
 `// fill this out`
 
+Test three layers individually before integration.
+- top layer with **test stub** [target layer]
+- target layer with **test driver** [top layer] + **test stub** [bottom layer]
+- bottom layer with **test driver** [target layer]
+
+Then start test layers together until you have full integration of the three layers.
+- allows for parallelism
+- requires additional test drivers / test stubs
+
 ## Vertical Integration
 `// fill this out`
+
+**Vertical integration:**
+- all components for a given use case are fully implemented
+- these components are tested together
+- similar to prototyping, but prototypes are not releasable
+
+**Disadvantages:**
+  - system evolves more incrementally
+  - design is more subject to change
 
 # Section 6.4: System Testing
 `// fill this out`

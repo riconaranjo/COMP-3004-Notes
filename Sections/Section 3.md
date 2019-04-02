@@ -8,6 +8,7 @@ Section 3: [High-Level System Design](Section%203.md)<br>
 Section 4: [Detailed Object Design](Section%204.md)<br>
 Section 5: [Implementation](Section%205.md)<br>
 Section 6: [Testing](Section%206.md)<br>
+Section 7: [Software Management](Section%207.md)<br>
 
 ## Section 3 Table of Contents
 

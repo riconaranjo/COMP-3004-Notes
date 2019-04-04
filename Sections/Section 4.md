@@ -9,6 +9,7 @@ Section 4: [Detailed Object Design](Section%204.md)<br>
 Section 5: [Implementation](Section%205.md)<br>
 Section 6: [Testing](Section%206.md)<br>
 Section 7: [Software Management](Section%207.md)<br>
+Section 8: [Professional Ethics](Section%208.md)<br>
 
 ## Section 4 Table of Contents
 

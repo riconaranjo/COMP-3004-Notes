@@ -52,3 +52,28 @@ Remote content provider using an **existing** third-party content provider.
   - **extends** connection error
 
 ## Sequence Diagram: Download + Store Video
+`// insert drawing`
+
+# Exercise 1: UML Use-Case Diagram
+
+- social media service with API for other remote social media sites
+  - allows users of remote sites to:
+    - manage newsfeed
+      - by retrieving other users' posts
+      - modifying newsfeed settings
+    - mange posts
+      - post new status updates
+      - upload photos / videos
+
+## High-level
+
+### Manage Newsfeed
+- third-party site user **initiates**
+- includes retrieve posts
+- includes modify settings
+
+### Manage Posts
+`// fill this out from description`
+
+## Sequence Diagram
+`// insert drawing`

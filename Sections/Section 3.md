@@ -402,148 +402,289 @@ A **Strategy** design pattern is used to **encapsulate algorithms / context**.
 - **boundary conditions**
 - subsystem **services and interfaces**
 
-**Control Flow:** used for control and concurrency<br>
-**Boundary conditions:** system initialization / shutdown + edge cases
+## System Strategies
+
+**Software / Hardware Mapping:**
+- used for off-the-shelf / legacy components
+  - for hardware configuration
+  - for internode communications
+
+**Data Management:**
+- used for identification of:
+  - persistent data
+  - storage locations
+  - acces mechanisms
+
+**Access Control:**
+- used for:
+  - authetication
+  - authorization
+  - confidentiality
+
+**Control Flow:**
+- used for control + concurrency
+
+**Boundary conditions:**
+- used for system initialization / shutdown
+- edge cases
 
 ## Components and Nodes
 
-`// todo: finish this`
+**Components:**
+- a single or group of subsystems
 
-**Components:** <br>
-**Runtime components:** <br>
-**Node:** <br>
-**UML notation:** <br>
+**Runtime components:**
+- component with a unique _process_
+
+**Node:**
+- the physical device / environment running a component
+
+**UML notation:**
+- deployment diagrams used for components + nodes
+  - showing relationships between _runtime_ components + nodes
+
 **System:**
+- a group of runtime components
+  - may be distributed across multiple nodes
+
+### UML Deployment Diagram
 
 ![uml-deployment](../img/uml-deployment.png)
 
 ## Refined Decomposition Activities
 
-- Mapping subsystems to components
-- Storing persistent data
-- Providing access control
-- Designing global control flow
-- Identifying services
-- Identifying boundary conditions
+1. Mapping subsystems to components
+2. Storing persistent data
+3. Providing access control
+4. Designing global control flow
+5. Identifying services
+6. Identifying boundary conditions
 
 ## Mapping Subsystems to Components
 
-`// todo: finish this`
+Steps form ***mapping subsystems to components:**
+1. select hardware configuration + platform
+  - decide on nodes + select hardware
+  - determine communication methods
+  - determine software
+    - OS / legacy software / COTS software
+2. allocate objects + subsystems to nodes
+  - to enable equitable distribution
+    - of functionality
+    - processing power
 
 ![uml-deployment-advanced](../img/uml-deployment-advanced.png)
 
 ## Storing Persistent Data
 
-`// todo: finish this`
+**Persistent data** is any data that persists between system executions.
+- need to be aware of impact due to storage methods
+  - access control
+  - concurrency
+
+***Persistent Objects** may be:
+- entity objects
+- user information
+- aspects of boundary objects _[e.g. submitted forms saved]_
+- objects that must survive system shutdown
+
+In order to **select a storage management strategy:**
+- you must take into account _non-functional requirements_
+
+### Persistent Storage Strategies
+
+**Flat Files:**
+- low-level sequence of bytes
+- can be very fast
+- issues with concurrency / data loss
+
+**Relational Database:**
+- tables of a predefined schema
+- mapping objects to schema may be complex
+- built in concurrency / access control / crash recovery
+  - _most common approach_
+
+**OO Database:**
+- supports objects and their associations
+- slower than relational database
 
 ### Trade-Offs
 
 **Flat files:**
-- ...
+- good for large + temporary data
+- low information density
 
 _**Databases:**_
-- ...
+- good for concurrent + detailed access
+- good for cross-platform / cross-application
 
 **Relation databases:**
-- ...
+- good for complex queries
+- good for large data
 
 **OO databases:**
-- ...
+- good for association-based queries
+- good for irregular associations
 
 ## Providing Access Control
-
-`// todo: finish this`
 
 **Access control** is what determines what actors have access to what information.
 - _e.g. authentication / confidentiality / authorization_
 
+### Types of Access Control
+
 **Authentication:**
-- ...
+- Determining whether an actor is who they say they are
+  - e.g. _log in credentials / NFC chip / biometrics_
 
 **Confidentiality:**
-- ...
-- always use (consumer-off-the-shelf software
+- Determining whether data can be accessed only by the intended actors
+`// always use COTS software for this`
 
 **Authorization:**
-- ...
-- always use (consumer-off-the-shelf software)
+- Determining whether data + operations can only be accessed by the intended actors
+`// always use COTS software for this`
 
 ### Access Matrix
 
-`// todo: finish this`
+To ensure **authorization** at the **object level**
+- determine which **objects are shared by actors**
+- identify which actors are authorized to perform which operations
+  - on which shared objects
+- use an _access matrix_ for this
 
 **Global access table:**
-- ...
+- is a list of allowed tuples
+  - (actor, class, operations)
+- if tuple exists, then an operation is allowed
 
-**Global access table:**
-- ...
+**Access control list:**
+- is a list of tuples associated with **each class**
+  - (actor, operations)
+- each time an object is accessed, it is verified against the list
 
 **Capability:**
-- ...
+- list of tuples associated with **each actor**
 
 ![access-matrix](../img/access-matrix.png)
 
 ### Rule-Based Access Matrix
 
-A **rule-based access matrix** is a compact representation, used when there are many actors and class; it can show access rules between broad categories of actors and classes.
+A **rule-based access matrix** is a compact representation, used when there are many actors and class.
+- it can show access rules between broad categories of actors and classes.
+- good for larger number of actors / classes
 
 ![access-matrix-rule](../img/access-matrix-rule.png)
 
 ### Access Control Types
 
-`// todo: finish this`
-
 **Static access control:**
-- ...
+- is when access rights are known at **compile time**
+- modelled as attributes of system objects
+  - implemented as an **access matrix**
 
 **Dynamic access control:**
-- ...
+- is when access rights are known at **runtime**
+  - implemented with **Proxy design pattern**
 
 ![access-matrix-arena](../img/access-matrix-arena.png)
 
 ## Design Global Control Flow
 
-`// todo: finish this`
-
 **Control flow** is the content and order of operations.
 
-_**Control flow mechanisms:**_
-- **Procedure-driven:**
-- **Event-driven:**
-- **Threads:**
+### Control flow mechanisms
 
-**Control objects:** are used to...
+**Procedure-driven:**
+- a single flow of control
+- blocking wait for input
+- not natural for OO languages
+
+**Event-driven:**
+- like procedure-driven
+- events are dispatched to other objects
+
+**Threads:**
+- like event-driven
+- each thread responds to different event
+- difficult to debug + test
+
+**Control objects:** are used to implement control flow mechanisms
+- they allow localization of a use-case's control flow
+- for each external event
+  - they record the event
+  - store temporary event states
+  - issue instructions to entity and boundary objects
 
 ## Identifying Services
 
-`// todo: finish this`
-
-To **identify services** start by reviewing subsystem dependencies, and then define an interface for each service in each of the subsystems.
+To **identify subsystem services**
+- first review subsystem dependencies
+- then defined an interface for each service
+  - public operations for the subsytem
+  - _should be a noun-phrase_
 
 ![identifying-services](../img/identifying-services.png)
 
 ## Identifying Boundary Conditions
 
-`// todo: finish this`
-
 **Steady state:**
-- ...
+- the normal operation of a system
 
 **Boundary conditions:**
-- ...
+- abnormal operation of a system
+  - described in boundary use-cases
+
+***Examples:**
+- system start-up / initialization / shutdown
+  - normal + abnormal
+- data corruption
+- network outages
+- administrative tasks
+  - user management
+  - data configuration
 
 **Exceptions:**
-- ...
+- when an event / error occurs during system execution
+- can be caused by:
+  - hardware failure _(e.g. disk failure)_
+  - operating envrionment changes (e.g. connection lost)
+  - software fault _(e.g. software design flaw)_
 
 **Role of exception handling:**
-- ...
+- how system deals with exceptions
+  - e.g. _error messages_
 
 ### Strategy
 
-To **identify boundary use-cases**  ...
-- _there needs to be an administration use-case to create objects such as **administrator user**_
+To **identify boundary use-cases**:
+1. analyze configuration of persistent objects
+  - use-cases where persistent object created / destroyed
+  - for objects that are never created / destroyed: administration use-case
+    - e.g. _there needs to be an administration use-case to create objects such as **administrator user**_
+2. analyze start-up / shutdown of each component
+  - use-case for component:
+    - _start-up_
+    - _shutdown_
+    - _configuration_
+3. handle exceptions for each component failure
+  - decide on system response
+  - add an _extending_ use case
+
+`// component is a collection of subsystems (or just one)`
 
 ![boundary-use-case](../img/boundary-use-case.png)
 ![boundary-use-case2](../img/boundary-use-case2.png)
 
-`// todo: work in progress`
+## Refined Decomposition Recap
+
+1. Group subsystems into components and nodes
+  - components: group of 1+ subsystems
+  - nodes: physical environment on which components run
+2. Identify:
+  - persistent data
+  - access control
+  - global control flow
+  - boundary conditions
+3. Then identify
+  - subsystem services / interfaces

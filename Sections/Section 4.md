@@ -309,7 +309,7 @@ t.getNumPlayers_afterAccept() = t.getNumPlayers_beforeAccept() + 1
 // => true if (t.getNumPlayers_beforeAccept() + 1) succeeds
 ```
 
-`// ()=) operator is logical comparison in pascal`
+`// (=) operator is logical comparison in pascal`
 
 ## Object Constraint Language
 

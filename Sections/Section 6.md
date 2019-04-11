@@ -42,17 +42,17 @@ Section 6.4: [System Testing](#section-6.4-system-testing)<br>
 - corrections
 
 ### Software Reliability
-`// fill this out`
+`// todo: fill this out`
 
 **Software Reliability** is the degree to which the specified behaviour **matches** observed behaviour.
 - to increase reliability:
   - fault avoidance / detection / tolerance
 
 ### Code Reviews
-`// fill this out`
+`// todo: fill this out`
 
 ### Testing Approach
-`// fill this out`
+`// todo: fill this out`
 
 **Testing Planning:**
   - create plan for unit and integration testing beforehand
@@ -68,7 +68,7 @@ Section 6.4: [System Testing](#section-6.4-system-testing)<br>
 - including structural testing – all components together
 
 ### blackbox / whitebox Testing
-`// fill this out`
+`// todo: fill this out`
 
 A **test component** is a part of the system that is isolated for testing.
 - can be:
@@ -84,7 +84,7 @@ A **test component** is a part of the system that is isolated for testing.
 `Unit testing includes: blackbox + whitebox tests`
 
 ### Faults / Error States / Failures
-`// fill this out`
+`// todo: fill this out`
 
 **Algorithmic:**
 - due to incorrect implementation
@@ -94,7 +94,7 @@ A **test component** is a part of the system that is isolated for testing.
   - _e.g. power failure_
 
 ### Test Cases
-`// fill this out`
+`// todo: fill this out`
 
 **Test case dependencies:**
 - functional testing
@@ -105,7 +105,7 @@ A **test component** is a part of the system that is isolated for testing.
 - precedence
 
 ### Test Stubs and Drivers
-`// fill this out`
+`// todo: fill this out`
 
 - testing isolated components
   - we need to simulate missing components
@@ -118,37 +118,37 @@ A **test component** is a part of the system that is isolated for testing.
 - _e.g. generates test data and API response_
 
 ### Corrections
-`// fill this out`
+`// todo: fill this out`
 
 A **correction** is a modification to repair a fault in a tested component.
 - _this may introduce a new fault_
 
 ## Usability Testing
-`// fill this out`
+`// todo: fill this out`
 
 # Section 6.2: Unit Testing
-`// fill this out - overview`
+`// todo: fill this out - overview`
 
 ## Techniques for Unit Testing
-`// fill this out`
+`// todo: fill this out`
 
 ### Equivalence Testing
-`// fill this out`
+`// todo: fill this out`
 
 ### Boundary Testing
-`// fill this out`
+`// todo: fill this out`
 
 ### Path Testing
-`// fill this out`
+`// todo: fill this out`
 
 ### State-Based Testing
-`// fill this out`
+`// todo: fill this out`
 
 ### Polymorphism Testing
-`// fill this out`
+`// todo: fill this out`
 
 # Section 6.3: Integration Testing
-`// fill this out - overview`
+`// todo: fill this out - overview`
 
 **Focus:** testing small group of already unit-tested components.
 - allows for more complex tests
@@ -158,17 +158,17 @@ A **correction** is a modification to repair a fault in a tested component.
 **Horizontal:** testing according to **functionality**
 
 ## Horizontal Integration
-`// fill this out`
+`// todo: fill this out`
 
 ### Big Bang Testing
-`// fill this out`
+`// todo: fill this out`
 
 Unit test every component individually.
 - then test them all together
 - difficult to determine which / where components fail
 
 ### Bottom-Up Testing
-`// fill this out`
+`// todo: fill this out`
 
 Start with **bottom** layer components.
 - then test with one layer **up**
@@ -176,7 +176,7 @@ Start with **bottom** layer components.
 - only requires test **drivers**
 
 ### Top-Down Testing
-`// fill this out`
+`// todo: fill this out`
 
 Start with **top** layer components.
 - then test with one layer **down**
@@ -184,7 +184,7 @@ Start with **top** layer components.
 - only requires test **stubs**
 
 ### Bottom-Up vs. Top-Down Testing
-`// fill this out`
+`// todo: fill this out`
 
 **Bottom-up:**
 - advantage: _interface faults found more easily_
@@ -195,7 +195,7 @@ Start with **top** layer components.
 - disadvantage: _requires many test stubs_
 
 ### Sandwich Testing
-`// fill this out`
+`// todo: fill this out`
 
 A **combination** of top-down and bottom-up approaches.
 - means there are **no unit tests**
@@ -207,7 +207,7 @@ A **combination** of top-down and bottom-up approaches.
 - layer below target
 
 ### Modified Sandwich Testing
-`// fill this out`
+`// todo: fill this out`
 
 Test three layers individually before integration.
 - top layer with **test stub** [target layer]
@@ -219,7 +219,7 @@ Then start test layers together until you have full integration of the three lay
 - requires additional test drivers / test stubs
 
 ## Vertical Integration
-`// fill this out`
+`// todo: fill this out`
 
 **Vertical integration:**
 - all components for a given use case are fully implemented
@@ -231,19 +231,19 @@ Then start test layers together until you have full integration of the three lay
   - design is more subject to change
 
 # Section 6.4: System Testing
-`// fill this out`
+`// todo: fill this out`
 
 A use-case is an abstraction of a scenario
 - a scenario is an _'instance'_ use-case
 
 ## Functional Testing
-`// fill this out`
+`// todo: fill this out`
 
 - testing functional requirements
 - blackbox
 
 ## Performance Testing
-`// fill this out`
+`// todo: fill this out`
 
 - **stress testing:**
 - **volume testing:**
@@ -252,7 +252,7 @@ A use-case is an abstraction of a scenario
 - **recovery testing:** ability to recover from error states
 
 ## Acceptance Testing
-`// fill this out`
+`// todo: fill this out`
 
 **Alpha testing:** field test in development environment<br>
 **Beta testing:** field test in target environment
@@ -265,4 +265,4 @@ A use-case is an abstraction of a scenario
 - functional / performance testing are repeated
 
 ## Testing Recap
-`// fill this out`
+`// todo: fill this out`

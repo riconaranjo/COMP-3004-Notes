@@ -18,70 +18,70 @@ Section 5.2: [Mapping to Collections](#section-5.2-mapping-to-collections)<br>
 Section 5.3: [Mapping to Storage](#section-5.3-mapping-to-storage)<br>
 
 # Section 5.1: Overview
-`// fill this out`
+`// todo: fill this out`
 
 ## Model Transformation
-`// fill this out`
+`// todo: fill this out`
 
 ### Refactoring
-`// fill this out`
+`// todo: fill this out`
 
 ### Forward Engineering
-`// fill this out`
+`// todo: fill this out`
 
 ### Reverse Engineering
-`// fill this out`
+`// todo: fill this out`
 
 ### Transformation Principles
-`// fill this out`
+`// todo: fill this out`
 
 ### Optimizing the Object Model
-`// fill this out`
+`// todo: fill this out`
 
 ## Mapping Contracts
-`// fill this out`
+`// todo: fill this out`
 
 # Section 5.2: Mapping to Collections
-`// fill this out - overview`
+`// todo: fill this out - overview`
 
 ## Mapping Association
-`// fill this out`
+`// todo: fill this out`
 
 ### Unidirectional One-to-One Associations
-`// fill this out`
+`// todo: fill this out`
 
 ### Bidirectional One-to-One Associations
-`// fill this out`
+`// todo: fill this out`
 
 ### One-to-Many Associations
-`// fill this out`
+`// todo: fill this out`
 
 ### Many-to-Many Associations
-`// fill this out`
+`// todo: fill this out`
 
 ## Optimizing Associations
-`// fill this out`
+`// todo: fill this out`
 
 ## Qualified Associations
-`// fill this out`
+`// todo: fill this out`
 
 ### Association Classes
-`// fill this out`
+`// todo: fill this out`
 
 # Section 5.3: Mapping to Collections
-`// fill this out - overview`
+`// todo: fill this out - overview`
 
 ## Relational Database Concepts
-`// fill this out`
+`// todo: fill this out`
 
 ## Mapping Classes and Attributes
-`// fill this out`
+`// todo: fill this out`
 
 ## Mapping Associations
-`// fill this out`
+`// todo: fill this out`
 
 ## Mapping Inheritance Relationships
-`// fill this out`
+`// todo: fill this out`
 
 ### Vertical Mapping [modifiability]
 - each class has its own table
@@ -96,4 +96,4 @@ Section 5.3: [Mapping to Storage](#section-5.3-mapping-to-storage)<br>
   - especially when dealing with deep inheritance
 
 ## Implementation Recap
-`// fill this out`
+`// todo: fill this out`

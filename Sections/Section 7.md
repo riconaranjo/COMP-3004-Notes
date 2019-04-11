@@ -18,10 +18,10 @@ Section 7.2: [Software Development Processes](#section-7.2-software-development-
 Section 7.3: [Configuration Management](#section-7.3-configuration-management)<br>
 
 # Section 7.1: Overview
-`// fill this out`
+`// todo: fill this out`
 
 ## Classic Project Management
-`// fill this out`
+`// todo: fill this out`
 
 - **planning:** definition phase
 - **organizing:** beginning phase
@@ -29,39 +29,39 @@ Section 7.3: [Configuration Management](#section-7.3-configuration-management)<b
 - **terminating:** end phase
 
 ## Agile Project Management
-`// fill this out`
+`// todo: fill this out`
 
 # Section 7.2: Software Development Processes
-`// fill this out - overview`
+`// todo: fill this out - overview`
 
 ## Classic Development Processes
 
 ### Waterfall Model
-`// fill this out`
+`// todo: fill this out`
 
 ### V-Model
-`// fill this out`
+`// todo: fill this out`
 
 ### Spiral Model
-`// fill this out`
+`// todo: fill this out`
 
 ## Unified Software Development Process
-`// fill this out`
+`// todo: fill this out`
 
 ## Agile Development
-`// fill this out`
+`// todo: fill this out`
 
 # Section 7.3: Configuration Management
-`// fill this out - overview`
+`// todo: fill this out - overview`
 
 ## Change Management
-`// fill this out`
+`// todo: fill this out`
 
 ## Version Management
-`// fill this out`
+`// todo: fill this out`
 
 ## System Building
-`// fill this out`
+`// todo: fill this out`
 
 ## Release Management
-`// fill this out`
+`// todo: fill this out`

@@ -52,7 +52,7 @@ Remote content provider using an **existing** third-party content provider.
   - **extends** connection error
 
 ## Sequence Diagram: Download + Store Video
-`// insert drawing`
+`// todo: insert drawing`
 
 # Exercise 1: UML Use-Case Diagram
 
@@ -73,7 +73,7 @@ Remote content provider using an **existing** third-party content provider.
 - includes modify settings
 
 ### Manage Posts
-`// fill this out from description`
+`// todo: fill this out from description`
 
 ## Sequence Diagram
-`// insert drawing`
+`// todo: insert drawing`

@@ -193,7 +193,7 @@ They can be identified by using generalized high-level scenarios and asking clie
 
 ![high-level-use-case](../img/high-level-use-case.png)
 
-`// high-level use-case diagrams contained in a box`
+`// high-level use-case diagrams are contained in a box`
 
 ### Detailed Use-Case Diagram
 

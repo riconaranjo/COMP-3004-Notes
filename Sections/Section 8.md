@@ -18,35 +18,35 @@ Section 8.2: [Code of Ethics](#section-8.2-code-of-ethics)<br>
 Section 8.3: [Case Studies](#section-8.3-case-studies)<br>
 
 # Section 8.1: Professionalism
-`// fill this out - overview`
+`// todo: fill this out - overview`
 
 ## Attributes of a Mature Profession
-`// fill this out`
+`// todo: fill this out`
 
 ## Attributes of a Mature Profession
-`// fill this out`
+`// todo: fill this out`
 
 ## Computer-related Careers
-`// fill this out`
+`// todo: fill this out`
 
 ## Software Reliability
-`// fill this out`
+`// todo: fill this out`
 
 ## Data Entry / Retrieval Errors
-`// fill this out`
+`// todo: fill this out`
 
 ## Notable Software System Failures
-`// fill this out`
+`// todo: fill this out`
 
 ### Patriot Missile System
-`// fill this out`
+`// todo: fill this out`
 
 ### Ariane 5
-`// fill this out`
+`// todo: fill this out`
 - uncaught exception caused loss of $500 million worth of satellites
 
 ### Therac-25
-`// fill this out`
+`// todo: fill this out`
 - Software built on older versions
   - older versions used hardware restrictions
   - but software restrictions were not properly implemented
@@ -73,13 +73,13 @@ Section 8.3: [Case Studies](#section-8.3-case-studies)<br>
 - ...
 
 # Section 8.2: Code of Ethics
-`// fill this out - overview`
+`// todo: fill this out - overview`
 
 ## Ethical Decisions
-`// fill this out`
+`// todo: fill this out`
 
 ### Brainstorming
-`// fill this out`
+`// todo: fill this out`
 
 1. Identify stakeholders
 2. Identify [for each stakeholder]
@@ -91,7 +91,7 @@ Section 8.3: [Case Studies](#section-8.3-case-studies)<br>
 3. Identify possible courses of actions
 
 ### Analysis
-`// fill this out`
+`// todo: fill this out`
 
 1. Identify impact of each course of action
   - considering code of ethics + morals + experience
@@ -99,7 +99,7 @@ Section 8.3: [Case Studies](#section-8.3-case-studies)<br>
 2. Select best option
 
 # Section 8.3: Case Studies
-`// fill this out - overview`
+`// todo: fill this out - overview`
 
 ## Kickbacks and Disclosure
 

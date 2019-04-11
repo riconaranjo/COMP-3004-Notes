@@ -310,7 +310,7 @@ Design patterns are sets of classes and their associations that provide a framew
 
 ## Abstract Factory
 
-An **Abstract Factory** design pattern enables creation of objects, independent of the client.
+An **Abstract Factory** design pattern **enables creation of objects**, _independent of the client_.
 - it provides an interface to inherited factory classes, with different implementations.
   - _e.g. products from different manufacturers_
 
@@ -326,7 +326,7 @@ Notice how
 
 ## Adapter
 
-An **adapter** design pattern exists as a wrapper around existing / legacy code to provide a new interface to the client.
+An **adapter** design pattern exists as a **wrapper around existing / legacy code** to provide a new interface to the client.
 - _e.g. new user interface for an old command line application_
 
 `// only works if it's a wrapper for existing code`
@@ -336,6 +336,7 @@ An **adapter** design pattern exists as a wrapper around existing / legacy code 
 ## Bridge
 
 A **Bridge** design pattern allows for alternate implementations with a single interface.
+- like Adapter, but for **new code**
 - e.g. _different storage implementations for one store_
 
 ![bridge](../img/bridge.png)
@@ -344,23 +345,54 @@ In this picture, the store would be the abstraction, and the concrete implemento
 
 ## Composite
 
-`// todo: finish this`
+A **Composite** design pattern represents a **recursive hierarchy**.
+- Composite class inherits from _Component_ class
+  - and Component class has many _Component_ objects
+- allows for encapsulation of hierarchies
+- e.g. _UI toolkits such as Java Swing_
+
+![composite](../img/composite.png)
 
 ## Façade
 
-`// todo: finish this`
+A **Façade** design pattern is used to **encapsulate subsystems**.
+- provides a high-level / abstract interface for class operations.
+
+![facade](../img/facade.png)
 
 ## Proxy
 
-`// todo: finish this`
+A **Proxy** design pattern encapsulates expensive objects [expensive: performance / security].
+- they provide a gateway to a real object
+
+![proxy](../img/proxy.png)
 
 ## Command
 
-`// todo: finish this`
+A **Command** design pattern is used to **encapsulate control flow**.
+- used to provide generic user requests
+- e.g. _execute, undo, store in Adobe Illustrator_
+
+![command](../img/command.png)
+
+## Observer
+
+An **Observer** design pattern is used to **seperate entity objects from the view**.
+- subscriber / observer are notified
+  - when changes to subject / publisher object occur
+- used for propagating model changes across multiple views
+- e.g. _MVC architecture style_
+
+![observer](../img/observer.png)
 
 ## Strategy
 
-`// todo: finish this`
+A **Strategy** design pattern is used to **encapsulate algorithms / context**.
+- used for dynamically selecting behaviour based on context
+  - like bridge, but implementation is decided by client
+- e.g. _selecting network connections (Wi-Fi, Ethernet, etc)_
+
+![strategy](../img/strategy.png)
 
 # Section 3.4: Refined System Decomposition
 

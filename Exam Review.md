@@ -77,3 +77,18 @@ Remote content provider using an **existing** third-party content provider.
 
 ## Sequence Diagram
 `// todo: insert drawing`
+
+## Types of Design Problems
+
+- **creational:** object creation [mechanisms]
+  - _abstract factory_
+- **structural:** simplification of object associations / relationships
+  - _adapter_
+  - _bridge_
+  - _composite_
+  - _façade_
+  - _proxy_
+- **behavioural:** communication patterns between objects
+  - _command_
+  - _observer_
+  - _strategy_

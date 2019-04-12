@@ -295,6 +295,7 @@ To **identify** subsystems:
 Design patterns are sets of classes and their associations that provide a framework to solve common design problems. They should be robust, modifiable, and adaptable.
 
 ## Types of Design Problems
+
 - **creational:** object creation [mechanisms]
   - _abstract factory_
 - **structural:** simplification of object associations / relationships

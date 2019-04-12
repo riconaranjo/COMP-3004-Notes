@@ -61,28 +61,39 @@ Section 4.4: [Refined System Decomposition](#section-4.4-refined-system-decompos
 
 ## Specification and Implementation Inheritance
 
-`// todo: finish this - slide 7`
-
 In C++ one has many inheritance tools at their disposal.
-- All inheritance relationships should be within the same subsystem, since inheritance is _"the strongest"_ relationship two classes can have.
+- all inheritance relationships should be within the same subsystem
+  - since inheritance is _"the strongest"_ relationship two classes can have.
 
-Focus of inheritance in analysis phase
-- set up generalization / specialization taxonomy
+**Focus of inheritance** in _analysis phase_:
+- is to set up generalization / specialization taxonomy
+  - _classification of objects_
 
-**Specification Inheritance:**
-- _classic inheritance_
+**Focus of inheritance** in _object design phase_:
+- is to reduce redundancy
+- and to enhance extensibility
 
-**Implementation Inheritance:**
+**Impact of inheritance** on coupling:
+- decouples client classes from a subclass
+  - _client accesses super-class (like a façade)_
+- introduces strong coupling between parent and child class
+
+### Specification Inheritance
+- using inheritance to classify concepts into type hierarchies
+  - "is-a" relationship between generalized + specialized classes
+  - _classic inheritance_
+
+### Implementation Inheritance
 - **not** an **“is-a”** relationship
-- use of inheritance purely for purposes of code reuse
+- use of inheritance purely for purposes of **code reuse**
 - superclass functionality is reused by:
   - _sub-classing_
   - _refining behaviour_
 - quick and dirty way to reuse operations
-  - usually results in unintended consequences
+  - can result in unintended consequences
 - not an intuitive use of inheritance
 
-### Example:
+**Example:**
 
 > When creating a class named _MyStack_ which is a FIFO stack implementation that uses the C++ vector implementation, the programmer is presented with 2 choices:
 >
@@ -93,8 +104,6 @@ Focus of inheritance in analysis phase
 
 ## Delegation
 
-`// todo: finish this - slide 11`
-
 **Delegation** is an alternative to _implementation inheritance_ which relays messages to another class.
 - this makes **dependencies explicit**
   - between new and reused classes
@@ -103,11 +112,14 @@ Focus of inheritance in analysis phase
 
 ![delegation](../img/delegation.png)
 
+In this example, **MySet** _delegates_ to **Hashtable**, instead of inheriting methods from **Hashtable**.
+
 ## Liskov Substitution Principle
 
 **Definition:**
 - assume T is a superclass and S is a subclass of T
 - _"if an object of type S can be substituted in all places where an object of type T is expected, then S is a subtype of T"_
+  - if S can used everywhere T is used, then S is child of T
 
 `// in other words:` **`polymorphism`**
 
@@ -122,87 +134,101 @@ _In essence, wherever one can use *polymorphism*, strict inheritance is present_
 
 ## Delegation and Inheritance in Design Patterns
 
-`// todo: finish this - slide 14`
+**Design patterns** are templates of solutions to recurring  design  problems.
+- a set of classes to solve common problems
+- that are robust + modifiable + adaptable
+
+`// most design patterns use inheritance + delegation`
+
+![design-patterns](../img/design-patterns.png)
 
 ## Reuse Activities
 
-`// todo: finish this - slide 15`
+These activities are design to increase **modifiablility + extensibility**.
 
 Due to frequent changes during the development phase caused by:
-- vendor...
+- new vendor / new technology
+- changes to implementation
+- new views
+- new complexity of application domain
+- errors in original requirements
 
 ## Encapsulating Data Sources
 
-`// todo: finish this - slide 19`
-
-Bridge
+**Bridge design pattern:**
+- good for multiple concrete implementations with a common interface
+  - similar to strategy but implementation is static
+  - _like a façade but using inheritance_
+- e.g. _multiple data storage technologies_
 
 ## Encapsulating Legacy Components
 
-`// todo: finish this - slide 20`
-
-Adapter
+**Adapter:**
+- good for modifying a legacy / existing component interface
+  - similar to bridge but with existing code
+- e.g. _new UI for existing backend_
 
 ## Encapsulating Context
 
-`// todo: finish this - slide 21`
-
-Strategy
+**Strategy design pattern:**
+- good for dynamically changing between concrete implementations based on context
+  - same as bridge but client decides implementation
+- e.g. _changing network connection type dynamically_
 
 ## Encapsulating Platforms
 
-`// todo: finish this - slide 22`
-
-Abstract factory
+**Abstract factory:**
+- good for shielding client from object creation process
+  - of related objects
+  - and prevents use of incompatible objects
+- e.g. _products from different manufacturers_
 
 ## Encapsulating Control Flow
 
-`// todo: finish this - slide 25`
-
-Command
+**Command:**
+- good for generic user requests
+  - without having to know request contents
+- e.g. _execute / undo / store_
 
 ## Encapsulating Hierarchies
 
-`// todo: finish this - slide 26`
-
-Composite
+**Composite:**
+- good for representing recursive hierarchy
+  - and adding new components without affecting existing ones
+- e.g. _UI toolkits_
 
 ## Maintaining Consistency
 
-`// todo: finish this - slide 27`
-
-Observer
+**Observer:**
+- good for propagating model changes across view
+- e.g. _MVC architecture_
 
 ## Heuristics for Selecting Design Patterns
 
-`// todo: finish this - slide 28`
-
-Abstract Factory
+### Abstract Factory
 - manufacturer independence
 - platform independence
 
-Adapter
+### Adapter
 - compliance with existing interface
 - reuse of existing legacy component
 
-Bridge
+### Bridge
 - support for future protocols
 
-Command
+### Command
 - all commands should be logged
 - all commands should be reversible
 
-Composite
+### Composite
 - support for aggregate structures
-- hierarchies of variable depth and width
+- hierarchies with variable depth / width
 
-Strategy
+### Strategy
 - decoupling of policy and mechanisms
 - interchanges of algorithms at runtime
 
 # Section 4.3 Specifying Interfaces
-
-`// todo: finish this section`
 
 **Specifying interfaces** is focused on specifying **boundaries between objects**.
 - integrating all existing / partial models into one coherent whole

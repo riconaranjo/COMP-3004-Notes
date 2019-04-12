@@ -18,28 +18,140 @@ Section 5.2: [Mapping to Collections](#section-5.2-mapping-to-collections)<br>
 Section 5.3: [Mapping to Storage](#section-5.3-mapping-to-storage)<br>
 
 # Section 5.1: Implemention
-`// todo: fill this out`
+
+This section covers strategies for:
+- mapping models to code
+- mapping models to persistent storage
+
+Before implementation you need:
+- subsystem decomposition
+- detailed object model
+
+Result from implementation is source code.
 
 ## Model Transformation
-`// todo: fill this out`
+
+**Model transformation** is when changes are applied to an existing object model.
+- such as modifying classes / attributes / operations
+- in order to:
+  - _simplify_
+  - _optimize_
+  - _better meet requirements_
+- e.g. _grouping related classes under same super class_
+
+**Goal:**
+- to improve aspect of model without compromising other properties
+
+**Characteristics:**
+- small number of classes / attributes / operations
+  - small series of steps
+- can occur in:
+  - object design phase
+  - implementation phase
+
+**Mapping contracts to exceptions:**
+- describe behaviour for when a contract is broken
+  - where exception is thrown / handled
+
+**Mapping class model to storage schema:**
+- defining how a class model relates to a schema
 
 ### Refactoring
-`// todo: fill this out`
+
+**Refactoring** is good for improving the design a system.
+- improving readability / modifiability without changing behaviour
+- small incremental steps + while testing
 
 ### Forward Engineering
-`// todo: fill this out`
+
+`Also known as implementing the model`
+
+**Forward engineering** is writing code based on model design.
+- object design model should match
+  - implementation errors will be introduced
+
+**Characteristics:**
+- applied to a set of model elements
+- results in:
+  - _class definition_
+  - _database schema_
+  - _etc_
 
 ### Reverse Engineering
-`// todo: fill this out`
+
+**Reverse engineering** is inferring model from implementation / code.
+- to recreate a model from a system that is already implemented
+
+**Characteristics:**
+- applied to a set of source code elements
+- results in a set of model elements
 
 ### Transformation Principles
-`// todo: fill this out`
+
+**Overall Approach:**
+- to improve the design of the system
+  - without introducing faults
+
+**Principles:**
+- each transformation must **address one criterion**
+  - _one design goal_
+- each transformation must **be local**
+  - _changes to few classes / attributes / operations_
+- each transformation must **be validated**
+  - models and documents must be updated
+
+`// changes to multiple subsystems is an architectural change [not transformation]`
 
 ### Optimizing the Object Model
-`// todo: fill this out`
+
+**Optimizing access paths:**
+- repeated association traversals
+  - identify frequency operations with multiple association traversals
+  - make these direct connections
+    - this may introduce redundant associations but reduces bottlenecks
+- replace _many_ multiplicity associations
+  - with _one_ qualified association
+  - _use key or indexing to associate objects_
+- for attributes only used for get / set operations
+  - move to calling class
+  - _this may reduce the number of classes_
+
+**Result:**
+- some redundant associations
+- fewer many-to-many associations
+- fewer classes
+
+**Collapsing objects:**
+- replace objects with attributes
+  - e.g. _container class for information_
+
+**Delaying expensive computation:**
+- only create expensive objects when needed
+- cache results of expensive operations
+  - values cached in private attributes
+  - trade-off between space + time
+
+**Suitable for:**
+- frequent + expensive operations
+  - with results that seldom change
 
 ## Mapping Contracts
-`// todo: fill this out`
+
+Use exceptions to mark contract violations.
+- it's easy to overdo this
+- it's more work and may introduce / mask bugs
+
+### Heuristics
+
+- only check preconditions
+  - not postconditions / invariants
+  - usually redundant
+- focus on system interfaces
+  - i.e. public operations
+- focus on long-life components
+  - this code may be reused
+- reuse code for checking constraints
+  - share exception classes
 
 # Section 5.2: Mapping to Collections
 `// todo: fill this out - overview`

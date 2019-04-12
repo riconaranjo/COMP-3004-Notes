@@ -18,6 +18,9 @@ Section 7.2: [Software Development Processes](#section-7.2-software-development-
 Section 7.3: [Configuration Management](#section-7.3-configuration-management)<br>
 
 # Section 7.1: Overview
+
+`// this entire section is omitted from the final`
+
 `// todo: fill this out`
 
 ## Classic Project Management

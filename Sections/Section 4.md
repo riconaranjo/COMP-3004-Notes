@@ -374,7 +374,9 @@ a
 
 ## OCL Qualifiers
 
-`// todo: finish this - slide 22`
+`// omitted from final`
+
+`// todo: finish this - slide 22 [omitted]`
 
 ## Interface Specification Activities
 
@@ -386,14 +388,14 @@ a
 
 ## Identifying Missing Attributes and Operations
 
-`// todo: finish this - slide 23`
+`// todo: finish this - slide 23 [omitted]`
 
 ## Specifying Preconditions and Postconditions
 
-`// todo: finish this - slide 26`
+`// todo: finish this - slide 26 [omitted]`
 
 ## Specifying Invariants
-`// todo: finish this - slide`
+`// todo: finish this - slide 29 [omitted]`
 
 **Heuristics:** (on specifying invariants)
 - focus on the lifetime of the class
@@ -402,8 +404,7 @@ a
   - specific to certain states
 
 ## Recap
-`// todo: finish this - slide`
 
-Constructing the detailed object model.
-
-About extending the object model and adding details to the initial object model.
+How to construct the detailed object model.
+- extending the object model
+  - adding details to the initial object model

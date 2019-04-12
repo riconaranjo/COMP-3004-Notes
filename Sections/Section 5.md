@@ -143,42 +143,80 @@ Use exceptions to mark contract violations.
 
 ### Heuristics
 
-- only check preconditions
+- **only check preconditions**
   - not postconditions / invariants
   - usually redundant
-- focus on system interfaces
+- **focus on system interfaces**
   - i.e. public operations
-- focus on long-life components
+- **focus on long-life components**
   - this code may be reused
-- reuse code for checking constraints
+- **reuse code for checking constraints**
   - share exception classes
 
 # Section 5.2: Mapping to Collections
-`// todo: fill this out - overview`
 
-## Mapping Association
-`// todo: fill this out`
+**Associations in UML** are represented as links between objections.
+- unidirectional / bidirectional
+
+**Associations in code** are represented as references to other objects.
+- only unidirectional
+
+## Mapping Associations
+
+### Programming Constructs
+
+Associations implemented as:
+- **single references:**
+  - one object stores reference to other object
+- **collections:**
+  - one object stores multiple references to other objects of same type
+- unidirectional associations
 
 ### Unidirectional One-to-One Associations
-`// todo: fill this out`
+
+- Mapped as a reference from **source** object to **destination** object
 
 ### Bidirectional One-to-One Associations
-`// todo: fill this out`
+
+- Mapped as a reference from **source** object to **destination** object
+- Mapped as a reference from **destination** object to **source** object
 
 ### One-to-Many Associations
-`// todo: fill this out`
+
+- Mapped as a source object with a **collection** of references to destination object _(with `*` multiplier / range)_
 
 ### Many-to-Many Associations
-`// todo: fill this out`
+
+- Mapped as a **source** object with a **collection** of references to **destination** object
+- Mapped as a **destination** object with a **collection** of references to **source** object
+  - _(with `*` multiplier / range)_
 
 ## Optimizing Associations
-`// todo: fill this out`
+
+Using any **"many"** associations can cause issues
+- slow to access
+- consistency difficult to maintain
+
+This can be improved by using:
+- qualified associations [using keys]
+- association classes
 
 ## Qualified Associations
-`// todo: fill this out`
+
+These reduce multiplicity on a "many" side of an association
+- can be used with one-to-many + many-to-many
+- mapped as:
+  - additional [unique] _qualifier_ attribute on destination object
+  - a keyed collection [map] on source object
+    - **key:** qualifier attribute
+    - **value:** destination object
 
 ### Association Classes
-`// todo: fill this out`
+
+**Association classes** are used to hold attributes and operations specific to an association
+- implemented as a seperate object
+  - with binary associations
+    - each mapped to a set of reference attributes
 
 # Section 5.3: Mapping to Collections
 `// todo: fill this out - overview`

@@ -149,37 +149,89 @@ A **test component** is a part of the system that is isolated for testing.
   - _e.g. power failure_
 
 ### Test Cases
-`// todo: fill this out`
+
+A **test case** is a set of inputs and their expected outputs for a component.
+- with the goal of finding failures + faults
+- tests can be carried out in parallel
+
+**Test case attributes:**
+- **unique name:** derived from requirement / component
+- **component under test:** operations / classes / subsystem
+- **input:** input data / commands entered by actor
+- **expected output:** expected results
 
 **Test case dependencies:**
-- functional testing
-- unit testing
+- **functional testing:** based on function model / use-cases
+- **unit testing:** based on subsystem interface
 
 **Test case associations:**
-- aggregation
-- precedence
+- **aggregation:** test case decomposed into sub-tests
+- **precedence:** order in which tests must be executed
+  - defined with **precedes** keyword
+
+`// minimizing test case associations allows for more parallelization`
 
 ### Test Stubs and Drivers
-`// todo: fill this out`
 
-- testing isolated components
-  - we need to simulate missing components
+In order to **test isolated components**
+- something must **call** test component
+- something must **execute** when test component call other components
+  - _we need to simulate missing components_
 
-**Test Drivers:** call the test component
+**Test Drivers:** simulates part of system that calls the test component
 - passes test inputs
 - shows test results
 
 **Test Stubs:** simulate missing components
-- _e.g. generates test data and API response_
+- hardcoded implementation of other components
+  - _e.g. generates test data and API response_
 
 ### Corrections
-`// todo: fill this out`
 
 A **correction** is a modification to repair a fault in a tested component.
 - _this may introduce a new fault_
 
+**Problem tracking:**
+- documenting all errors and code fixes
+
+**Regression testing:**
+- re-running all tests after a code fix
+- ensuring existing functionality is not compromised
+  - ideally automated
+
+**Rationale maintenance:**
+- documenting reasons for corrections
+  - ensuring no new faults  are introduced
+    - due to violations of prior assumptions
+
 ## Usability Testing
-`// todo: fill this out`
+
+**Usability testing** is focused on finding the **differences** between the **system behaviour** and **user expectations**.
+- such as:
+  - _UI details_
+  - _screen layout_
+  - _sequence of interactions_
+  - _hardware_
+
+### Approach
+1. developers set out test objectives
+2. participants accomplish predefined tasks
+3. developers observe + collect data
+
+### Types of Usability Tests
+
+**Scenario test:**
+- present users with a scenario
+- developers gauge user reactions
+  - can use _storyboard or prototype_
+
+**Prototype test:**
+- present users with software implementing key aspect of system
+  - **vertical prototype:** implements one use case completely
+  - **horizontal prototype:** implements one layer (e.g. UI prototype)
+
+**Product test:**
+- present users with functional system
 
 # Section 6.2: Unit Testing
 `// todo: fill this out - overview`

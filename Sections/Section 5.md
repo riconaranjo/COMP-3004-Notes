@@ -37,7 +37,7 @@ Result from implementation is source code.
   - _simplify_
   - _optimize_
   - _better meet requirements_
-- e.g. _grouping related classes under same super class_
+- e.g. _grouping related classes under same super-class_
 
 **Goal:**
 - to improve aspect of model without compromising other properties
@@ -218,32 +218,112 @@ These reduce multiplicity on a "many" side of an association
   - with binary associations
     - each mapped to a set of reference attributes
 
-# Section 5.3: Mapping to Collections
-`// todo: fill this out - overview`
+# Section 5.3: Mapping to Storage
+
+**Persistent objects** need to be **mapped** to structures in the **data management system**.
+- data management system selected in the system design
+- data structures may be:
+  - _flat files_
+  - _relational / OO databases_
+- by transforming model to storage schema
+  - for flat files + relation databases
+
+- **rows:** data records
+- **columns:** attributes
+- **cell:** value of a record attribute
 
 ## Relational Database Concepts
-`// todo: fill this out`
+
+### Schema
+
+- data description
+- the set of attributes stored for each object
+  - _aka data meta-model_
+
+### Primary Key
+
+- set of attributes used to **uniquely** identify a record
+
+### Foreign Key
+
+- attribute that references primary key in another table
+  - links data records between tables
 
 ## Mapping Classes and Attributes
-`// todo: fill this out`
+
+| code      | database |
+| --------- | -------- |
+| class     | table    |
+| attribute | column   |
+| instance  | row      |
+
+**Names** between object model and schema **should match**.
+- to provide traceability and reduce confusion
+
+**Mapping attribute types:**
+- some constraints may have to be added
+  - e.g. _string length due to database implementation_
+
+**Primary key:**
+- chosen from a set of class attributes
+  - causes problems
+    - if values change
+    - if application domain changes
+- adding a **unique identifier** is more robust
+  - e.g. _student ID_
 
 ## Mapping Associations
-`// todo: fill this out`
+
+### Buried association
+
+- used to implement:
+  - **one-to-one associations**
+    - use **foreign key of destination** in source object
+      - vice versa in for bidirectionality
+  - **one-to-many associations**
+    - use **foreign key of source** in destination objects
+
+### Association Table
+
+- used for many-to-many associations
+  - creating a new two column table with linking both class foreign key
+  - each row is one association
+- increases number of tables and the time required to traverse associations
+  - can be used for one-to-one associations
 
 ## Mapping Inheritance Relationships
-`// todo: fill this out`
 
 ### Vertical Mapping [modifiability]
-- each class has its own table
-  - e.g. one for super class + one for sub class
-- each to modify / add attributes
-- access time is slow due to many tables
+
+- two tables per object:
+  - one super-class attributes
+  - one for sub-class attributes
+    - super-class table has column for actual sub-class
+- easy to modify / add attributes
+- access time is **slow** due to **many tables**
+  - just for one object
 
 ### Horizontal Mapping [performance]
-- duplicates superclass columns for each subclass
+
+- duplicates **superclass columns for each subclass**
+  - since each subclass has same column
 - any schema modifications are complex
-- queries are faster
+  - since multiple tables affected
+- queries are **faster**
   - especially when dealing with deep inheritance
 
 ## Implementation Recap
-`// todo: fill this out`
+
+Strategies for mapping models to code:
+- avoid _"many"_ associations
+  - use qualified associations instead
+  - or association classes
+    - to hold attributes specific to an operation
+
+Strategies for mapping models to persistent storage:
+- associations to collections
+  - vertical / horizontal mapping
+- contracts mapped to exceptions
+- object models mapped to storage
+  - **buried associations:** foreign key in destination / source
+  - **association tables:** seperate table with foreign keys

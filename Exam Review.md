@@ -23,7 +23,7 @@ Remote content provider using an **existing** third-party content provider.
 - can steam video content locally [detailed]
 
 ## Tips
-- better not to split up high-level use case based on users
+- better not to split up high-level use-case based on users
 - best local + remote content
 
 ## High-level
@@ -35,7 +35,7 @@ Remote content provider using an **existing** third-party content provider.
 - regular **initiates**
 - premium **initiates**
 - third-party **participates**
-  - _this implies they participate with all derived use cases_
+  - _this implies they participate with all derived use-cases_
 
 ## Detailed
 

@@ -670,7 +670,7 @@ To **identify boundary use-cases**:
     - _configuration_
 3. handle exceptions for each component failure
   - decide on system response
-  - add an _extending_ use case
+  - add an _extending_ use-case
 
 `// component is a collection of subsystems (or just one)`
 

@@ -25,6 +25,10 @@ Section 6.4: [System Testing](#section-6.4-system-testing)<br>
 **System Testing:** for test cases based on functional model
 
 **Testing** is a **systematic attempt** to find faults – deviation between **specified + observed system behaviour**.
+- using test cases to expose system faults
+  - test should be done by either:
+    - developers not involved in design / implementation
+    - dedicated testers
 
 **Failure:** deviation of specified / observed behaviour<br>
 **Error State:**a state where further processing will lead to failure<br>
@@ -42,52 +46,103 @@ Section 6.4: [System Testing](#section-6.4-system-testing)<br>
 - corrections
 
 ### Software Reliability
-`// todo: fill this out`
 
 **Software Reliability** is the degree to which the specified behaviour **matches** observed behaviour.
 - to increase reliability:
   - fault avoidance / detection / tolerance
 
+**Fault avoidance:**
+- detecting faults in the model (before execution)
+  - using:
+    - _development methodologies_
+    - _configuration management_
+    - _verification_
+
+**Fault detection:**
+- detecting faults in the implementation
+- identifying error states + faults
+  - by debugging _(uncontrolled)_
+  - by testing _(controlled)_
+
+**Fault tolerance:**
+- dealing with faults + system failures
+  - recovering from these at runtime
+
 ### Code Reviews
-`// todo: fill this out`
+
+A **code review** is a manual inspection of code without execution.
+- performed by a review team
+  - developers + QA
+- critical component for safety-critical projects
+- **advantage:** can uncover many faults / bugs
+- **disadvantage:** time consuming
+
+**Types:**
+1. **Walkthrough:** developer present their code
+2. **Inspection:** review team inspects the code
+
+**Goals:**
+- review the code against function + non-functional requirements
+- check for efficiency
+- check for accuracy + completeness of comments
 
 ### Testing Approach
-`// todo: fill this out`
 
-**Testing Planning:**
-  - create plan for unit and integration testing beforehand
+Testing should be approached to find system faults.
+- _best to select data with a high likelihood of finding a bug_
+  - if you don't find bugs
+    - more likely tests are not thorough enough
 
-**Usability Testing:**
-- Testing the UI
+**Testing planning:**
+- create test plan for unit + integration testing beforehand
+  - as soon as model is stable
 
-**Unit test:**
-- testing use case objects and subsystems
+**Usability testing:**
+- testing UI / UX
 
-**Testing Planning:**
+**Unit testing:**
+- testing use-case objects + subsystems
+  - must include whitebox + blackbox testing
+
+**Integration testing:**
 - testing how components work together
-- including structural testing – all components together
+  - including structural testing _(all components together)_
 
-### blackbox / whitebox Testing
-`// todo: fill this out`
+**System testing:**
+- testing system as a whole
+  - including all scenarios + requirements + design goals
+- **functional testing**
+  - based on _requirements analysis document_
+- **performance testing**
+  - based on _system design document_
+- **acceptance testing**
+  - based on _project agreement_ (performed by client)
+
+### Blackbox / Whitebox Testing
 
 A **test component** is a part of the system that is isolated for testing.
 - can be:
-  - object(s)
-  - subsystem(s)
+  - _object(s)_
+  - _subsystem(s)_
 
-**blackbox:** testing output based on input
-- no access to internal components<br>
+**blackbox:** testing **output** based on **input**
+- no access to internal components
+
 **whitebox:** testing internal components
 - testing dynamic model states
   - and object interactions
 
-`Unit testing includes: blackbox + whitebox tests`
+`// unit testing must include both: blackbox + whitebox tests`
 
 ### Faults / Error States / Failures
-`// todo: fill this out`
 
 **Algorithmic:**
 - due to incorrect implementation
+- may be introduced during:
+  - _analysis_
+  - _design_
+  - _implementation_
+- e.g. _data structure overload / lack of initialization / performance issues_
 
 **Mechanical:**
 - due mechanical faults
@@ -222,7 +277,7 @@ Then start test layers together until you have full integration of the three lay
 `// todo: fill this out`
 
 **Vertical integration:**
-- all components for a given use case are fully implemented
+- all components for a given use-case are fully implemented
 - these components are tested together
 - similar to prototyping, but prototypes are not releasable
 

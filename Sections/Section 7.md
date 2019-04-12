@@ -21,10 +21,10 @@ Section 7.3: [Configuration Management](#section-7.3-configuration-management)<b
 
 `// this entire section is omitted from the final`
 
-`// todo: fill this out`
+`// todo: fill this out [omitted]`
 
 ## Classic Project Management
-`// todo: fill this out`
+`// todo: fill this out [omitted]`
 
 - **planning:** definition phase
 - **organizing:** beginning phase
@@ -32,7 +32,7 @@ Section 7.3: [Configuration Management](#section-7.3-configuration-management)<b
 - **terminating:** end phase
 
 ## Agile Project Management
-`// todo: fill this out`
+`// todo: fill this out [omitted]`
 
 # Section 7.2: Software Development Processes
 `// todo: fill this out - overview`
@@ -40,31 +40,31 @@ Section 7.3: [Configuration Management](#section-7.3-configuration-management)<b
 ## Classic Development Processes
 
 ### Waterfall Model
-`// todo: fill this out`
+`// todo: fill this out [omitted]`
 
 ### V-Model
-`// todo: fill this out`
+`// todo: fill this out [omitted]`
 
 ### Spiral Model
-`// todo: fill this out`
+`// todo: fill this out [omitted]`
 
 ## Unified Software Development Process
-`// todo: fill this out`
+`// todo: fill this out [omitted]`
 
 ## Agile Development
-`// todo: fill this out`
+`// todo: fill this out [omitted]`
 
 # Section 7.3: Configuration Management
 `// todo: fill this out - overview`
 
 ## Change Management
-`// todo: fill this out`
+`// todo: fill this out [omitted]`
 
 ## Version Management
-`// todo: fill this out`
+`// todo: fill this out [omitted]`
 
 ## System Building
-`// todo: fill this out`
+`// todo: fill this out [omitted]`
 
 ## Release Management
-`// todo: fill this out`
+`// todo: fill this out [omitted]`

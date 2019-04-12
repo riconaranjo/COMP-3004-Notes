@@ -3,7 +3,7 @@
 ## Sections Table of Contents
 
 Section 1: [Introduction to Software Engineering](Section%201.md)<br>
-Section 2: [Requirement Analysis](Section%202.md)<br>
+Section 2: [Requirements Analysis](Section%202.md)<br>
 Section 3: [High-Level System Design](Section%203.md)<br>
 Section 4: [Detailed Object Design](Section%204.md)<br>
 Section 5: [Implementation](Section%205.md)<br>
@@ -18,7 +18,7 @@ Section 4.2: [Reusing Pattern Solutions](#section-4.2-reusing-pattern-solutions)
 Section 4.3: [Specifying Interfaces](#section-4.3-specifying-interfaces)<br>
 Section 4.4: [Refined System Decomposition](#section-4.4-refined-system-decomposition)<br>
 
-# Section 4.1: Overview
+# Section 4.1: Detailed Object Design
 
 **Detailed object design** creates an object model that contains the solution domain.
 - by identifying solution domain objects

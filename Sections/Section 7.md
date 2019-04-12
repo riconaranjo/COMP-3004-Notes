@@ -3,7 +3,7 @@
 ## Sections Table of Contents
 
 Section 1: [Introduction to Software Engineering](Section%201.md)<br>
-Section 2: [Requirement Analysis](Section%202.md)<br>
+Section 2: [Requirements Analysis](Section%202.md)<br>
 Section 3: [High-Level System Design](Section%203.md)<br>
 Section 4: [Detailed Object Design](Section%204.md)<br>
 Section 5: [Implementation](Section%205.md)<br>
@@ -17,7 +17,7 @@ Section 7.1: [Overview](#section-7.1-overview)<br>
 Section 7.2: [Software Development Processes](#section-7.2-software-development-processes)<br>
 Section 7.3: [Configuration Management](#section-7.3-configuration-management)<br>
 
-# Section 7.1: Overview
+# Section 7.1: Software Management
 
 `// this entire section is omitted from the final`
 

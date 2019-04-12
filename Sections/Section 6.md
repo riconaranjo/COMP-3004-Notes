@@ -3,7 +3,7 @@
 ## Sections Table of Contents
 
 Section 1: [Introduction to Software Engineering](Section%201.md)<br>
-Section 2: [Requirement Analysis](Section%202.md)<br>
+Section 2: [Requirements Analysis](Section%202.md)<br>
 Section 3: [High-Level System Design](Section%203.md)<br>
 Section 4: [Detailed Object Design](Section%204.md)<br>
 Section 5: [Implementation](Section%205.md)<br>
@@ -18,7 +18,7 @@ Section 6.2: [Unit Testing](#section-6.2-unit-testing)<br>
 Section 6.3: [Integration Testing](#section-6.3-integration-testing)<br>
 Section 6.4: [System Testing](#section-6.4-system-testing)<br>
 
-# Section 6.1: Overview
+# Section 6.1: Testing
 
 **Unit Testing:** for blackbox / whitebox testing<br>
 **Integration Testing:** selecting testing integration strategy, and for stubs and driver test cases<br>

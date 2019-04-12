@@ -1,9 +1,9 @@
-# Section 2: Requirement Analysis
+# Section 2: Requirements Analysis
 
 ## Sections Table of Contents
 
 Section 1: [Introduction to Software Engineering](Section%201.md)<br>
-Section 2: [Requirement Analysis](Section%202.md)<br>
+Section 2: [Requirements Analysis](Section%202.md)<br>
 Section 3: [High-Level System Design](Section%203.md)<br>
 Section 4: [Detailed Object Design](Section%204.md)<br>
 Section 5: [Implementation](Section%205.md)<br>
@@ -17,7 +17,7 @@ Section 2.1: [Overview](#section-2.1-overview)<br>
 Section 2.2: [Requirements Elicitation](#section-2.2-requirements-elicitation)<br>
 Section 2.3: [Analysis](#section-2.3-analysis)<br>
 
-# Section 2.1: Overview
+# Section 2.1: Requirements Analysis
 
 ## Purpose
 

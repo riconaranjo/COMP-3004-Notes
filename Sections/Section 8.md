@@ -18,35 +18,35 @@ Section 8.2: [Code of Ethics](#section-82-code-of-ethics)<br>
 Section 8.3: [Case Studies](#section-83-case-studies)<br>
 
 # Section 8.1: Professionalism
-`// todo: fill this out - overview`
 
-## Attributes of a Mature Profession
-`// todo: fill this out`
-
-## Attributes of a Mature Profession
-`// todo: fill this out`
-
-## Computer-related Careers
-`// todo: fill this out`
+_Informally:_ a profession is a job that requires a high level of education and practical experience.
 
 ## Software Reliability
-`// todo: fill this out`
+
+Computer systems may be unreliable
+- which can cause – in the worst cases – fatalities
 
 ## Data Entry / Retrieval Errors
-`// todo: fill this out`
 
-## Notable Software System Failures
-`// todo: fill this out`
+Computer systems may fail due to incorrect data entry
+- e.g. _voters disqualified as felons incorrectly_
 
 ### Patriot Missile System
-`// todo: fill this out`
+
+- anti-air missile used in Gulf War
+- was designed to be run for short amount of time
+  - was in operation for 100+ hours
+  - clock error lead to missile killing 28 people
 
 ### Ariane 5
-`// todo: fill this out`
+
 - uncaught exception caused loss of $500 million worth of satellites
+  - statement assigning `float` to `int` value
+- in previous rocket values were smaller
+  - thus exception could not occur in Ariane 4
 
 ### Therac-25
-`// todo: fill this out`
+
 - Software built on older versions
   - older versions used hardware restrictions
   - but software restrictions were not properly implemented
@@ -67,19 +67,32 @@ Section 8.3: [Case Studies](#section-83-case-studies)<br>
 - system gave x-ray dose at high dosage
 
 **Analysis:**
-- ...
+- development team focused on fixing individual bugs
+- system was not fail-safe
+  - no devices to report overdose (error state)
+- company did not communicate fully with customers
 
 **Lessons:**
-- ...
+- it is difficult to debug concurrent tasks
+  - best to keep design simple
+- documentation is crucial
+- reusing code is not always better
 
 # Section 8.2: Code of Ethics
-`// todo: fill this out - overview`
 
 ## Ethical Decisions
-`// todo: fill this out`
+
+To make ethical decisions:
+1. Brainstorm
+  - identify actors + effects on them
+  - identity courses of actions
+2. Analysis
+  - categorize courses of actions
+    - _obligatory / prohibited / acceptable_
+  - select + justify
+3. Execute
 
 ### Brainstorming
-`// todo: fill this out`
 
 1. Identify stakeholders
 2. Identify [for each stakeholder]
@@ -91,15 +104,13 @@ Section 8.3: [Case Studies](#section-83-case-studies)<br>
 3. Identify possible courses of actions
 
 ### Analysis
-`// todo: fill this out`
 
 1. Identify impact of each course of action
   - considering code of ethics + morals + experience
-  - categorize as ethically: obligatory / prohibited / acceptable
+  - categorize as ethically: _obligatory / prohibited / acceptable_
 2. Select best option
 
 # Section 8.3: Case Studies
-`// todo: fill this out - overview`
 
 ## Kickbacks and Disclosure
 

@@ -234,28 +234,71 @@ A **correction** is a modification to repair a fault in a tested component.
 - present users with functional system
 
 # Section 6.2: Unit Testing
-`// todo: fill this out - overview`
+
+**Unit testing** is focused on testing objects + subsystems.
+- collections of objects tested only after each individual object is tested
+
+## Characteristics
+
+- reducing complexity of testing process
+  - early testing in implementation process
+    - makes finding faults easier
+- allows for parallelization of tests
+
+## Units
+
+Units to be tested are **selected from**:
+- **object model**
+  - objects in use-cases should be tested
+- **subsystem decomposition**
+  - subsystems tested after individual classes tested
 
 ## Techniques for Unit Testing
-`// todo: fill this out`
 
 ### Equivalence Testing
-`// todo: fill this out`
+
+**Equivalence testing** minimizes the number of test cases
+- by grouping input into equivalent classes
+- only one member of each equivalent class is tested
+  - e.g. _testing only 1 month out of 12 possible_
+
+**Criteria:**
+- each input should only belong to one equivalence class
+- each input should only belong to one equivalence class
+- any error for one member should occur for all members of an equivalence class
 
 ### Boundary Testing
-`// todo: fill this out`
+
+**Boundary testing** is a special case of equivalence testing.
+- where the focus ins on boundary conditions
+  - this reduces test coverage but simplifies tests
+    - risks not finding some defects
 
 ### Path Testing
-`// todo: fill this out`
+
+**Path testing** is a whitebox technique for finding faults by executing all possible paths through the code.
+- by traversing all edges in a test component flow chart
+- this does not test defects due to:
+  - code omissions (i.e. _missing paths_)
+  - invariants of data structures
 
 ### State-Based Testing
-`// todo: fill this out`
+
+**State-based testing** compares the state of a system to an expected state, using classes.
+- achieving a specific state can be complex
 
 ### Polymorphism Testing
-`// todo: fill this out`
+
+**Polymorphic testing** checks all possible dynamic bindings.
+- expands source code in order to:
+  - **typecast** to possible subclasses
+    - and **invoke operations** on subclass
+  - construct flow graph _(due to type)_
+  - perform path testing
+
+![polymorphic-testing](../img/polymorphic-testing.png)
 
 # Section 6.3: Integration Testing
-`// todo: fill this out - overview`
 
 **Focus:** testing small group of already unit-tested components.
 - allows for more complex tests

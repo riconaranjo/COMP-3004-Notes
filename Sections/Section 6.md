@@ -392,28 +392,58 @@ Then start **test layers together** until you have full integration of the three
 - design is more subject to change
 
 # Section 6.4: System Testing
-`// todo: fill this out`
 
-A use-case is an abstraction of a scenario
+The focus of system testing is to test the complete integrated system.
+- ensuring it complies with functional + non-functional requirements
+
+## Activities
+1. Functional Testing
+  - _does it meet functional requirements_
+2. Performance Testing
+  - _does it meet non-functional requirements_
+3. Acceptance Testing
+  - _does it serve the client's expectations / needs_
+
+**Note:** a use-case is an abstraction of a scenario
 - a scenario is an _'instance'_ use-case
+  - gives actual values to _"user signs up for accounts"_
+    - *"user signs up for account with username 'test_123'"*
 
 ## Functional Testing
-`// todo: fill this out`
 
-- testing functional requirements
-- blackbox
+**Functional testing** is used to find deviations between the system and functional requirements – _aka requirements testing_.
+- using the use-case model and system behaviour
+- with test cases derived from **Requirements Analysis Document**
+  - is a type of blackbox testing
+
+### Strategy
+
+The **strategy for functional testing** is to find scenarios that are likely to cause failures.
+- from the use case model
+- and exercise common and exception use cases
 
 ## Performance Testing
-`// todo: fill this out`
 
-- **stress testing:**
-- **volume testing:**
-- **security testing:**
-- **timing testing:**
-- **recovery testing:** ability to recover from error states
+**Performance testing** is used to find deviations between the system and design goals.
+- test cases derived from:
+  - **Requirements Analysis Document**
+  - **System Design Document**
+
+### Types of Performance Testing
+
+- **stress testing:** checking if system can handle multiple requests
+- **volume testing:** checking for faults with large data
+- **security testing:** checking for security faults...
+- **timing testing:** checking for timing constraint violations
+- **recovery testing:** checking for ability to recover from error states
+
+A system is **validated** if **functional + performance** tests produce _no faults_.
 
 ## Acceptance Testing
-`// todo: fill this out`
+
+**Acceptance testing** is the final phase of testing before client accepts the system – _aka beta testing_.
+- system is installed for group of users
+  - feedback is collected from these users
 
 **Alpha testing:** field test in development environment<br>
 **Beta testing:** field test in target environment
@@ -429,6 +459,7 @@ A use-case is an abstraction of a scenario
 
 - **Unit testing:** testing individual objects + subsystems
 - **Integration testing:** testing individual components
+- **System testing:** testing all components
 - **Test stubs:** layer for code called _(lower levels)_
 - **Test driver:** layer for calling code _(higher levels)_
 

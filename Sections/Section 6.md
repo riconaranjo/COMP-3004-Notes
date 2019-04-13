@@ -302,39 +302,47 @@ Units to be tested are **selected from**:
 
 **Focus:** testing small group of already unit-tested components.
 - allows for more complex tests
+- first individual components are tested individually
+  - then groups are tested together
+  - _allowing for complex parts to be tested incrementally_
 
-**Optimal:** All tests in parallel<br>
-**Horizontal:** testing according to **layers**<br>
-**Horizontal:** testing according to **functionality**
+**Optimal:** All tests run in parallel
+
+Component testing ordering can be:
+- **Horizontal:** testing according to **layers**
+- **Vertical:** testing according to **functionality**
 
 ## Horizontal Integration
-`// todo: fill this out`
+
+**Horizontal integration testing strategies:**
+1. Big Bang Testing
+2. Bottom-Up Testing
+3. Top-Down Testing
+4. Bottom-Up vs. Top-Down Testing
+5. Sandwich Testing
+6. Modified Sandwich Testing
 
 ### Big Bang Testing
-`// todo: fill this out`
 
-Unit test every component individually.
-- then test them all together
+Unit test **every component individually**.
+- then test them **all together**
 - difficult to determine which / where components fail
 
 ### Bottom-Up Testing
-`// todo: fill this out`
 
 Start with **bottom** layer components.
-- then test with one layer **up**
-  - and so on
+- then test with **one layer** _up_
+  - and repeat
 - only requires test **drivers**
 
 ### Top-Down Testing
-`// todo: fill this out`
 
 Start with **top** layer components.
-- then test with one layer **down**
-  - and so on
+- then test with **one layer** _down_
+  - and repeat
 - only requires test **stubs**
 
 ### Bottom-Up vs. Top-Down Testing
-`// todo: fill this out`
 
 **Bottom-up:**
 - advantage: _interface faults found more easily_
@@ -345,40 +353,43 @@ Start with **top** layer components.
 - disadvantage: _requires many test stubs_
 
 ### Sandwich Testing
-`// todo: fill this out`
 
-A **combination** of top-down and bottom-up approaches.
+A **combination** of top-down and bottom-up approaches in parallel.
 - means there are **no unit tests**
 - **no test drivers / test stubs** required
 
 **The system is divided into:**
-- target layer
-- layer above target
-- layer below target
+- _target layer_
+- _layer above target_
+- _layer below target_
+
+**Approach:**
+- top-down + bottom-up testing occur in parallel
+  - incrementally
 
 ### Modified Sandwich Testing
-`// todo: fill this out`
 
-Test three layers individually before integration.
+**Test three layers individually** before integration.
 - top layer with **test stub** [target layer]
 - target layer with **test driver** [top layer] + **test stub** [bottom layer]
 - bottom layer with **test driver** [target layer]
 
-Then start test layers together until you have full integration of the three layers.
+Then start **test layers together** until you have full integration of the three layers.
+- replacing test drivers with top layer components
+  - and test stubs with bottom layer components
 - allows for parallelism
-- requires additional test drivers / test stubs
+  - but requires additional test drivers / test stubs
 
 ## Vertical Integration
-`// todo: fill this out`
 
 **Vertical integration:**
-- all components for a given use-case are fully implemented
-- these components are tested together
-- similar to prototyping, but prototypes are not releasable
+- *all components* for a given use-case are **fully implemented**
+  - these components are tested together
+  - similar to prototyping
 
 **Disadvantages:**
-  - system evolves more incrementally
-  - design is more subject to change
+- system evolves more incrementally
+- design is more subject to change
 
 # Section 6.4: System Testing
 `// todo: fill this out`
@@ -415,4 +426,10 @@ A use-case is an abstraction of a scenario
 - functional / performance testing are repeated
 
 ## Testing Recap
-`// todo: fill this out`
+
+- **Unit testing:** testing individual objects + subsystems
+- **Integration testing:** testing individual components
+- **Test stubs:** layer for code called _(lower levels)_
+- **Test driver:** layer for calling code _(higher levels)_
+
+`// a component is 1+ subsystems`

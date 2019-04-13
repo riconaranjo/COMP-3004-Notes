@@ -13,9 +13,9 @@ Section 8: [Professional Ethics](Section%208.md)<br>
 
 ## Section 7 Table of Contents
 
-Section 7.1: [Overview](#section-7.1-overview)<br>
-Section 7.2: [Software Development Processes](#section-7.2-software-development-processes)<br>
-Section 7.3: [Configuration Management](#section-7.3-configuration-management)<br>
+Section 7.1: [Overview](#section-71-software-management)<br>
+Section 7.2: [Software Development Processes](#section-72-software-development-processes)<br>
+Section 7.3: [Configuration Management](#section-73-configuration-management)<br>
 
 # Section 7.1: Software Management
 

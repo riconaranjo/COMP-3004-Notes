@@ -13,9 +13,9 @@ Section 8: [Professional Ethics](Section%208.md)<br>
 
 ## Section 1 Table of Contents
 
-Section 1.1: [Overview](#section-1.1-overview)<br>
-Section 1.2: [Team Project](#section-1.2-team-project)<br>
-Section 1.3: [UML Notation](#section-1.3-uml-notation)<br>
+Section 1.1: [Overview](#section-11-overview)<br>
+Section 1.2: [Team Project](#section-12-team-project)<br>
+Section 1.3: [UML Notation](#section-13-uml-notation)<br>
 
 # Section 1.1: Overview
 

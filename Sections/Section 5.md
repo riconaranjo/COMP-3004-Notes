@@ -13,9 +13,9 @@ Section 8: [Professional Ethics](Section%208.md)<br>
 
 ## Section 5 Table of Contents
 
-Section 5.1: [Overview](#section-5.1-overview)<br>
-Section 5.2: [Mapping to Collections](#section-5.2-mapping-to-collections)<br>
-Section 5.3: [Mapping to Storage](#section-5.3-mapping-to-storage)<br>
+Section 5.1: [Overview](#section-51-implementation)<br>
+Section 5.2: [Mapping to Collections](#section-52-mapping-to-collections)<br>
+Section 5.3: [Mapping to Storage](#section-53-mapping-to-storage)<br>
 
 # Section 5.1: Implemention
 

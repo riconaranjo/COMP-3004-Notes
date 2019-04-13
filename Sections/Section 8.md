@@ -13,9 +13,9 @@ Section 8: [Professional Ethics](Section%208.md)<br>
 
 ## Section 8 Table of Contents
 
-Section 8.1: [Professionalism](#section-8.1-professionalism)<br>
-Section 8.2: [Code of Ethics](#section-8.2-code-of-ethics)<br>
-Section 8.3: [Case Studies](#section-8.3-case-studies)<br>
+Section 8.1: [Professionalism](#section-81-professionalism)<br>
+Section 8.2: [Code of Ethics](#section-82-code-of-ethics)<br>
+Section 8.3: [Case Studies](#section-83-case-studies)<br>
 
 # Section 8.1: Professionalism
 `// todo: fill this out - overview`

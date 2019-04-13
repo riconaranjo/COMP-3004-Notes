@@ -13,10 +13,10 @@ Section 8: [Professional Ethics](Section%208.md)<br>
 
 ## Section 3 Table of Contents
 
-Section 3.1: [Overview](#section-3.1-overview)<br>
-Section 3.2: [Initial System Decomposition](#section-3.2-initial-system-decomposition)<br>
-Section 3.3: [Design Patterns](#section-3.3-design-patterns)<br>
-Section 3.4: [Refined System Decomposition](#section-3.4-refined-system-decomposition)<br>
+Section 3.1: [Overview](#section-31-high-level-system-design)<br>
+Section 3.2: [Initial System Decomposition](#section-32-initial-system-decomposition)<br>
+Section 3.3: [Design Patterns](#section-33-design-patterns)<br>
+Section 3.4: [Refined System Decomposition](#section-34-refined-system-decomposition)<br>
 
 # Section 3.1: High-Level System Design
 

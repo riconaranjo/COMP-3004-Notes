@@ -13,9 +13,9 @@ Section 8: [Professional Ethics](Section%208.md)<br>
 
 ## Section 2 Table of Contents
 
-Section 2.1: [Overview](#section-2.1-overview)<br>
-Section 2.2: [Requirements Elicitation](#section-2.2-requirements-elicitation)<br>
-Section 2.3: [Analysis](#section-2.3-analysis)<br>
+Section 2.1: [Overview](#section-21-requirements-analysis)<br>
+Section 2.2: [Requirements Elicitation](#section-22-requirements-elicitation)<br>
+Section 2.3: [Analysis](#section-23-analysis)<br>
 
 # Section 2.1: Requirements Analysis
 

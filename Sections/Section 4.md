@@ -13,10 +13,10 @@ Section 8: [Professional Ethics](Section%208.md)<br>
 
 ## Section 4 Table of Contents
 
-Section 4.1: [Overview](#section-4.1-overview)<br>
-Section 4.2: [Reusing Pattern Solutions](#section-4.2-reusing-pattern-solutions)<br>
-Section 4.3: [Specifying Interfaces](#section-4.3-specifying-interfaces)<br>
-Section 4.4: [Refined System Decomposition](#section-4.4-refined-system-decomposition)<br>
+Section 4.1: [Overview](#section-41-detailed-object-design)<br>
+Section 4.2: [Reusing Pattern Solutions](#section-42-reusing-pattern-solutions)<br>
+Section 4.3: [Specifying Interfaces](#section-43-specifying-interfaces)<br>
+Section 4.4: [Refined System Decomposition](#section-44-refined-system-decomposition)<br>
 
 # Section 4.1: Detailed Object Design
 

@@ -52,33 +52,58 @@ Remote content provider using an **existing** third-party content provider.
   - **extends** connection error
 
 ## Sequence Diagram: Download + Store Video
-`// todo: insert drawing`
+
+![sequence-exam-1](/img/sequence-exam-1.png)
 
 # Exercise 1: UML Use-Case Diagram
 
 - social media service with API for other remote social media sites
   - allows users of remote sites to:
-    - manage newsfeed
-      - by retrieving other users' posts
-      - modifying newsfeed settings
-    - mange posts
-      - post new status updates
-      - upload photos / videos
+    - **manage newsfeed** [high-level]
+      - by retrieving other users' posts [detailed]
+      - modifying newsfeed settings [detailed]
+    - **mange posts** [high-level]
+      - post new status updates [detailed]
+      - upload photos / videos [detailed]
 
 ## High-level
 
 ### Manage Newsfeed
 - third-party site user **initiates**
-- includes retrieve posts
-- includes modify settings
+- **includes** retrieve newsfeed posts
+  - **extends** connection error
+- **includes** modify settings
+  - **extends** connection error
 
 ### Manage Posts
-`// todo: fill this out from description`
+- third-party site user **initiates**
+- **includes** retrieve post new status updates
+  - **extends** connection error
+- **includes** upload photos / videos
+  - **extends** connection error
 
-## Sequence Diagram
-`// todo: insert drawing`
+## Sequence Diagram: Retrieve Newsfeed
+![sequence-exam-2](/img/sequence-exam-2.png)
 
-## Types of Design Problems
+# Sequence Diagram Steps
+
+1. figure out which actor initiates use-case
+2. select **boundary object** used to initiate use-case
+    - named with a _noun-phrase_
+    - e.g. _candidates: download option, submit form request_
+3. **boundary object** creates **control object**
+    - named with a _verb-phrase_
+      - e.g. _DownloadMusicControl_
+4. **control object** dictates logic
+    - entity object may be created then saved
+    - information may be saved directly
+    - new boundary object may be created
+      - reply / notification to initial actor
+      - to communicate with third-party actor
+5. all created objects are destroyed
+    - original boundary object remains
+
+# Types of Design Problems
 
 - **creational:** object creation [mechanisms]
   - _abstract factory_

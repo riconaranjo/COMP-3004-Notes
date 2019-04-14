@@ -88,8 +88,22 @@ The goal of high-level system design is to turn the analysis products into a sys
 ## Initial Subsystem Decomposition
 
 This phase is about determining:
-- **design goals** [based on functional / non-functional requirements]
+- **design goals** [based on functional + non-functional requirements]
 - **initial subsystem decomposition**
+
+### Design Goals
+
+1. use functional requirements + non-functional requirements to decide on design goals
+    - _performance + dependability + cost + maintenance + end user_
+2. establish trade-offs
+
+### Subsystem Decomposition
+
+1. assign objects in a use-case to a single subsystem
+2. create subsystems to move data between subsystems
+3. refine:
+    - ensure all objects in a subsystem are related
+    - minimize subsytem associations
 
 ## Refined Subsystem Decomposition
 

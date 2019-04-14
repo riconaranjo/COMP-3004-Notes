@@ -60,23 +60,23 @@ One software engineering process that has two components:
 - build models of the code to see how things would work
 - like how buildings and airplanes models are built for **testing / feasibility** before the actual one is built
 
-> - **How do we model the solution domain?**
->   - find a solution to the problem
->   - identify objects required to model the solution
->   - write the code
->   - make sure it works as expected
-> - **What activities are involved?**
->   - high-level system design
->   - detailed object design
->   - implementation
->   - testing
-> - **How do we model the application domain?**
->   - describe the problem to be solved
->   - describe the system requirements
->   - identify objects required to model the requirements
-> - **What activities are involved?**
->   - requirements elicitation
->   - analysis
+- **How do we model the solution domain?**
+  - find a solution to the problem
+  - identify objects required to model the solution
+  - write the code
+  - make sure it works as expected
+- **What activities are involved?**
+  - high-level system design
+  - detailed object design
+  - implementation
+  - testing
+- **How do we model the application domain?**
+  - describe the problem to be solved
+  - describe the system requirements
+  - identify objects required to model the requirements
+- **What activities are involved?**
+  - requirements elicitation
+  - analysis
 
 ## Management Aspects
 
@@ -87,17 +87,17 @@ One software engineering process that has two components:
 
 ## Software Development Phases
 
-> - **Requirements analysis**
->   - requirements elicitation
->   - analysis
-> - **Design**
->   - high-level system design
->   - detailed object design
-> - **Implementation**
-> - **Testing**
->   - unit testing, integration testing
->   - system testing
-> - **Deployment and maintenance**
+- **Requirements analysis**
+  - requirements elicitation
+  - analysis
+- **Design**
+  - high-level system design
+  - detailed object design
+- **Implementation**
+- **Testing**
+  - unit testing, integration testing
+  - system testing
+- **Deployment and maintenance**
 
 ## Software Development Products
 
@@ -163,9 +163,9 @@ The team leader ensures **things happen**.
 
 **UML** is **a tool** for expressing **system models**:
 - **functional models**
-  - case diagrams
+  - use-case diagrams
 - **dynamic models**
-  - state diagrams
+  - state-machine diagrams
   - sequence diagrams
   - activity diagrams
 - **object models**
@@ -193,7 +193,7 @@ A **class diagram** describes the **system** in terms of **classes**; they are *
 
 ## State Machine Diagrams
 
-A **finite state machine** diagram is a **graphical** representation of an object's **state behaviour**: states + transitions.
+A **finite state-machine** diagram is a **graphical** representation of an object's **state behaviour**: states + transitions.
 
 ![state-diagram](../img/state-diagram.png)
 
@@ -219,10 +219,10 @@ A **sequence diagram** is a **graphical** representation of **messages** between
 
 ![sequence-diagram](../img/sequence-diagram.png)
 
-Objects **creation** shown with an action `<<creates>>`.<br>
-Objects **destruction** shown with an X.
+Objects **creation** shown with an action `<<create>>`.<br>
+Objects **destruction** shown with an `X`.
 
 ## Packages
 
 A **UML package** is a group of related UML diagrams, that organizes the diagrams and reduces the diagram complexity.
-- e.g. use-case / class / sequence / state machine _diagrams_
+- e.g. use-case / class / sequence / state-machine _diagrams_

@@ -56,7 +56,7 @@ The **role of development team**, in the requirement analysis is to **understand
   - focus on **system / object behaviour**
   - from user's point of view
   - non-technical
-  - _state machine / sequence activity diagrams_
+  - _state-machine / sequence activity diagrams_
 
 # Section 2.2: Requirements Elicitation
 
@@ -301,7 +301,7 @@ High-level object categories:
 
 **Dynamic model** construction (based on functional requirements):
 - UML sequence diagrams
-- state machine diagrams
+- state-machine diagrams
 - activity diagram
 
 ## Analysis Phase
@@ -438,7 +438,7 @@ Control objects are used to coordinate boundary and entity objects:
 
 **Modelling state-dependent behaviour** is done to show the behaviour of a single object and perhaps identify new behaviour.
 
-**State machine diagrams** are used for long-lived objects with state-dependent behaviour, not for every object.
+**State-machine diagrams** are used for long-lived objects with state-dependent behaviour, not for every object.
 - **almost always:** control objects
 - **sometimes:** entity objects
 - **almost never:** boundary objects

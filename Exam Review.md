@@ -87,7 +87,7 @@ Remote content provider using an **existing** third-party content provider.
 
 # Sequence Diagram Steps
 
-1. figure out which actor initiates use-case
+1. figure out which actor **initiates** use-case
 2. select **boundary object** used to initiate use-case
     - named with a _noun-phrase_
     - e.g. _candidates: download option, submit form request_
@@ -100,7 +100,7 @@ Remote content provider using an **existing** third-party content provider.
     - new boundary object may be created
       - reply / notification to initial actor
       - to communicate with third-party actor
-5. all created objects are destroyed
+5. all created objects are **destroyed**
     - original boundary object remains
 
 # Types of Design Problems

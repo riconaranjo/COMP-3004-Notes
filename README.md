@@ -14,5 +14,6 @@ Section 5: [Implementation](/Sections/Section%205.md)<br>
 Section 6: [Testing](/Sections/Section%206.md)<br>
 Section 7: [Software Management](/Sections/Section%207.md)<br>
 Section 8: [Professional Ethics](/Sections/Section%208.md)<br>
+Sections Summary: [Sections Summary](Sections%20Summary.md)<br>
 Exam Review: [Final Exam Review](Exam%20Review.md)<br>
 Naming Conventions: [Naming Conventions](Naming%20Conventions.md)

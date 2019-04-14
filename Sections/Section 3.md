@@ -25,7 +25,7 @@ Section 3.4: [Refined System Decomposition](#section-34-refined-system-decomposi
 3. Design Patterns
 4. Refined System Decomposition
 
-`// * midterm will cover up to here`
+`// * midterm will cover up to here (inclusive)`
 
 ## Purpose
 
@@ -99,7 +99,7 @@ This phase establishes the runtime components and nodes.
 
 # Section 3.2: Initial System Decomposition
 
-`// midterm includes this section (inclusive)`
+`// midterm includes this section`
 
 ## Overview
 
@@ -186,8 +186,8 @@ A layer is a grouping of subsystems providing related services.
 ## Partitions
 
 Partitions are a **group of peer subsystems**, where **each group** is responsible for a **set of unique services**.
-- loosely coupled
-- groups can operate independently
+- partitions are loosely coupled
+- partitions can operate independently
 
 System decomposition is made up of partitioning and layering of subsystems.
 
@@ -198,7 +198,8 @@ System decomposition is made up of partitioning and layering of subsystems.
 - **Repository**
   - subsystems:
     - all access single data structure
-    - loosely coupled [good] + highly coupled [bad]
+      - highly coupled to repository [bad]
+    - loosely coupled to each other [good]
     - communicate solely through repository [bottleneck]
   - synchronized through repository locks (e.g. mutexes)
   - good for:

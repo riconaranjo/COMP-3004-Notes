@@ -9,3 +9,4 @@ These are all the naming conventions for different classes / interfaces / etc.
 | control     | _verb-phrase_  |
 | use-case    | _verb-phrase_  |
 | interface   | _noun-phrase_  |
+| service     | _noun-phrase_  |

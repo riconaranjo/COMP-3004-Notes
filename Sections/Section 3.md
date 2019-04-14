@@ -233,7 +233,7 @@ System decomposition is made up of partitioning and layering of subsystems.
     - application logic: control / entity objects
     - storage: implements storage and retrieval of persistent objects
       - can be shared by multiple applications
-    - _like MVC but storage is external to application?_
+    - _like MVC but model logic moved to application logic_
 - **Four-Tier**
   - presentation client / presentation server / application logic / storage layers
     - same as three-tier but application logic split:

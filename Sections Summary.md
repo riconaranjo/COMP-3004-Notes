@@ -137,8 +137,8 @@ These are template solutions for common design problems, that can be modified an
 ### Repository
 
 One single data structure accessed by all subsystems.
-- all subsystems loosely coupled
-  - except to repository [high coupling]
+- all subsystems loosely coupled [good]
+  - except to repository (high coupling) [bad]
 - all communication happens through repository
 - **good for:**
   - complex data
@@ -149,33 +149,100 @@ One single data structure accessed by all subsystems.
 ### MVC
 
 Model-View-Controller.
-- model and view subsystems are loosely coupled
+- model and view subsystems are loosely coupled [good]
+  - but highly coupled to control subsystem [bad]
 - based on _Observer Design Pattern_
 - **good:**
-  - adding multiple views with shared models
-  maps well to _entity + boundary + control_ objects
+  - for adding multiple views with shared models
+  - maps well to _entity + boundary + control_ objects
 
 ### Client-Server
 
 Server subsystem provides services to client subsystems.
-- uses Remote Procedure Calls (RPC)
+- communications through Remote Procedure Calls (RPC)
 - client subsystems interact with the users
 - like repository but with remote database
 - **good for:**
   - distributed systems
+- **bad:**
+  - can result in deadlock with blocking waits
 
 ### Peer-to-Peer
 
+Generalization of client-server
+- subsystems can be client + server
+- **good for:**
+  - distributed systems
+    - without a central database
+- **bad for:**
+  - higher risk of deadlock than client server
+
 ### 3-Tier
 
+3-Tiers: Interface + Application Logic + Storage
+- Like MVC but model logic moved to application logic
+  - _in other words just doesn't implement observer design pattern_
+
 ### 4-Tier
+
+4-Tiers: Client Interface + Server Interface + Application Logic + Storage
+- client interface is the UI
+- server interface is an API
+- **good for:**
+  - implementing multiple UIs for different clients
+  - having an API as well as a UI interface
+- e.g. _facebook_
+
+### Pipe and Filter
+
+Each filter is a subsystem
+- pipes are used as the association between subsystems
+- **good for** data streams
+- **bad for** complex interactions between filters
+  - e.g. _bash shell_
+
+## Design Goals
+
+| _Performance_     | Defintion                         |
+| ----------------- | --------------------------------- |
+| response time     | time to acknowledge user requests |
+| throughput        | how man tasks per unit time       |
+| memory efficiency | how much memory does it need      |
+
+| _Dependability_ | Defintion                                |
+| --------------- | ---------------------------------------- |
+| robustness      | ability to survive invalid input         |
+| reliability     | deviation of expected + actual behaviour |
+| fault tolerance | can it survive + correct faults          |
+| security        | survive attacks                          |
+| safety          | not endanger people                      |
+
+| _Cost_         | Defintion                        |
+| -------------- | -------------------------------- |
+| development    | cost of developing system        |
+| deployment     | cost of deploying                |
+| upgrade        | cost of upgrading                |
+| maintenance    | cost of enhancements + bug fixes |
+| administration | cost of upkeep / admin           |
+
+| _Maintenance_ | Defintion                          |
+| ------------- | ---------------------------------- |
+| extensibility | adding functionality               |
+| modifiability | adjusting functionality            |
+| adaptability  | moving between application domains |
+| portability   | moving between platforms           |
+| readability   | understanding system from code     |
+| traceability  | mapping code back to requirements  |
+
+| _End User_ | Defintion                   |
+| ---------- | --------------------------- |
+| utility    | how useful is to the client |
+| usability  | how easy is it to use       |
 
 # Section 4: Detailed Object Design
 
 # Section 5: Implementation
 
 # Section 6: Testing
-
-# Section 7: Software Management
 
 # Section 8: Professional Ethics

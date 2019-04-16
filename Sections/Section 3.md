@@ -324,8 +324,6 @@ The arena case study implements this design pattern, where the `Game` object is 
 
 ![arena-factory](../img/arena-factory.png)
 
-Notice how
-
 ## Adapter
 
 An **adapter** design pattern exists as a **wrapper around existing / legacy code** to provide a new interface to the client.

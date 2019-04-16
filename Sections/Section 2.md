@@ -131,7 +131,7 @@ completeness
 - NF-01 UI shows character health _(usability)_
 - NF-02 game should be recoverable after crash _(reliability)_
 - NF-03 configurable graphics _(performance)_
-- NF-04 show be extensible to other graphics libraries_(supportability)_
+- NF-04 game should be extensible to other graphics libraries _(supportability)_
 - ...
 
 ## Requirements Elicitation Activities

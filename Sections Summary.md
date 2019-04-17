@@ -670,6 +670,199 @@ Strategies for mapping models to persistent storage:
   - **buried associations:** foreign key in destination / source
   - **association tables:** seperate table with foreign keys
 
-# Section 6: Testing
+# Section 6.1: Testing
+
+**Unit Testing:** for blackbox / whitebox testing
+- **blackbox:** testing **output** based on **input**
+  - no access to internal components
+- **whitebox:** testing internal components
+  - testing dynamic model states
+    - and object interactions
+
+**Integration Testing:** selecting testing integration strategy, and for stubs and driver test cases
+
+**System Testing:** for test cases based on functional model
+
+**Testing planning:**
+- create test plan for unit + integration testing beforehand
+  - as soon as model is stable
+
+**Usability testing:**
+- testing UI / UX
+
+**Unit testing:**
+- testing use-case objects + subsystems
+  - must include whitebox + blackbox testing
+
+**Integration testing:**
+- testing how components work together
+  - including structural testing _(all components together)_
+
+**System testing:**
+- testing system as a whole
+  - including all scenarios + requirements + design goals
+- **functional testing**
+  - based on _requirements analysis document_
+- **performance testing**
+  - based on _system design document_
+- **acceptance testing**
+  - based on _project agreement_ (performed by client)
+
+**Test Drivers:** simulates part of system that calls the test component
+- passes test inputs
+- shows test results
+
+**Test Stubs:** simulate missing components
+- hardcoded implementation of other components
+  - _e.g. generates test data and API response_
+
+## Usability Tests
+
+**Scenario test:**
+- present users with a scenario
+- developers gauge user reactions
+  - can use _storyboard or prototype_
+
+**Prototype test:**
+- present users with software implementing key aspect of system
+  - **vertical prototype:** implements one use case completely
+  - **horizontal prototype:** implements one layer (e.g. UI prototype)
+
+**Product test:**
+- present users with functional system
+
+# Section 6.2: Unit Testing
+
+## Equivalence Testing
+
+**Equivalence testing** minimizes the number of test cases
+- by grouping input into equivalent classes
+- only one member of each equivalent class is tested
+  - e.g. _testing only 1 month out of 12 possible_
+
+## Boundary Testing
+
+**Boundary testing** is a special case of equivalence testing.
+- where the focus ins on boundary conditions
+  - this reduces test coverage but simplifies tests
+    - risks not finding some defects
+
+## Path Testing
+
+**Path testing** is a whitebox technique for finding faults by executing all possible paths through the code.
+- by traversing all edges in a test component flow chart
+- this does not test defects due to:
+  - code omissions (i.e. _missing paths_)
+  - invariants of data structures
+
+## State-Based Testing
+
+**State-based testing** compares the state of a system to an expected state, using classes.
+- achieving a specific state can be complex
+
+## Polymorphism Testing
+
+**Polymorphic testing** checks all possible dynamic bindings.
+- expands source code in order to:
+  - **typecast** to possible subclasses
+    - and **invoke operations** on subclass
+  - construct flow graph _(due to type)_
+  - perform path testing
+
+Component testing ordering can be:
+
+# Section 6.3: Integration Testing
+
+- **Horizontal:** testing according to **layers**
+- **Vertical:** testing according to **functionality**
+
+## Horizontal Integration
+
+### Big Bang Testing
+
+Unit test **every component individually**.
+- then test them **all together**
+- difficult to determine which / where components fail
+
+### Bottom-Up Testing
+
+Start with **bottom** layer components.
+- then test with **one layer** _up_
+  - and repeat
+- only requires test **drivers**
+
+### Top-Down Testing
+
+Start with **top** layer components.
+- then test with **one layer** _down_
+  - and repeat
+- only requires test **stubs**
+
+### Bottom-Up vs. Top-Down Testing
+
+**Bottom-up:**
+- advantage: _interface faults found more easily_
+- disadvantage: _UI faults found last_
+
+**Top-down:**
+- advantage: _UI faults found first_
+- disadvantage: _requires many test stubs_
+
+### Sandwich Testing
+
+A **combination** of top-down and bottom-up approaches in parallel.
+- means there are **no unit tests**
+- **no test drivers / test stubs** required
+
+**The system is divided into:**
+- _target layer_
+- _layer above target_
+- _layer below target_
+
+**Approach:**
+- top-down + bottom-up testing occur in parallel
+  - incrementally
+
+### Modified Sandwich Testing
+
+**Test three layers individually** before integration.
+- top layer with **test stub** [target layer]
+- target layer with **test driver** [top layer] + **test stub** [bottom layer]
+- bottom layer with **test driver** [target layer]
+
+Then start **test layers together** until you have full integration of the three layers.
+- replacing test drivers with top layer components
+  - and test stubs with bottom layer components
+- allows for parallelism
+  - but requires additional test drivers / test stubs
+
+## Vertical Integration
+
+**Vertical integration:**
+- *all components* for a given use-case are **fully implemented**
+  - these components are tested together
+  - similar to prototyping
+
+**Disadvantages:**
+- system evolves more incrementally
+- design is more subject to change
+
+# Section 6.4: System Testing
+
+## Activities
+1. Functional Testing
+  - _does it meet functional requirements_
+2. Performance Testing
+  - _does it meet non-functional requirements_
+3. Acceptance Testing
+  - _does it serve the client's expectations / needs_
+
+## Testing Recap
+
+- **Unit testing:** testing individual objects + subsystems
+- **Integration testing:** testing individual components
+- **System testing:** testing all components
+- **Test stubs:** layer for code called _(lower levels)_
+- **Test driver:** layer for calling code _(higher levels)_
 
 # Section 8: Professional Ethics

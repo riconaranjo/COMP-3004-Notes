@@ -30,9 +30,11 @@ Section 6.4: [System Testing](#section-6.4-system-testing)<br>
     - developers not involved in design / implementation
     - dedicated testers
 
-**Failure:** deviation of specified / observed behaviour<br>
-**Error State:**a state where further processing will lead to failure<br>
-**Fault:** a defect / bug; the cause of an error<br>
+**Failure:** deviation of specified / observed behaviour
+
+**Error State:** a state where further processing will lead to failure
+
+**Fault:** a defect / bug; the cause of an error
 
 ## Basic Concepts
 

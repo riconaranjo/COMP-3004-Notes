@@ -868,3 +868,52 @@ Then start **test layers together** until you have full integration of the three
 - **Test driver:** layer for calling code _(higher levels)_
 
 # Section 8: Professional Ethics
+
+## Software Failures
+
+## Patriot Missile System
+
+- anti-air missile used in Gulf War
+- was designed to be run for short amount of time
+  - was in operation for 100+ hours
+  - clock error lead to missile killing 28 people
+
+## Ariane 5
+
+- uncaught exception caused loss of $500 million worth of satellites
+  - statement assigning `float` to `int` value
+- in previous rocket values were smaller
+  - thus exception could not occur in Ariane 4
+
+## Therac-25
+
+- Software built on older versions
+  - older versions used hardware restrictions
+  - but software restrictions were not properly implemented
+- two investigations: very hard to find root cause
+  - there was a race condition
+
+**Machine had two modes:**
+- `X`: X-ray
+- `E`: Electron beam
+
+**What happened:**
+- mistake made where staff entered `X` and dosage
+  - then magnets moved
+- user fixed mistake to `E`
+  - software only checked cursor location
+  - and if it found it in the bottom right corner
+    - it assumed no fields were changed
+- system gave x-ray dose at high dosage
+
+## Ethical Decisions
+
+To make ethical decisions:
+1. **Brainstorm**
+    - identify actors + effects on them
+    - identity courses of actions
+2. **Analysis**
+    - categorize courses of actions
+      - _obligatory / prohibited / acceptable_
+    - select + justify
+3. **Execute**

@@ -83,14 +83,14 @@ Computer systems may fail due to incorrect data entry
 ## Ethical Decisions
 
 To make ethical decisions:
-1. Brainstorm
-  - identify actors + effects on them
-  - identity courses of actions
-2. Analysis
-  - categorize courses of actions
-    - _obligatory / prohibited / acceptable_
-  - select + justify
-3. Execute
+1. **Brainstorm**
+    - identify actors + effects on them
+    - identity courses of actions
+2. **Analysis**
+    - categorize courses of actions
+      - _obligatory / prohibited / acceptable_
+    - select + justify
+3. **Execute**
 
 ### Brainstorming
 
@@ -106,8 +106,8 @@ To make ethical decisions:
 ### Analysis
 
 1. Identify impact of each course of action
-  - considering code of ethics + morals + experience
-  - categorize as ethically: _obligatory / prohibited / acceptable_
+    - considering code of ethics + morals + experience
+    - categorize as ethically: _obligatory / prohibited / acceptable_
 2. Select best option
 
 # Section 8.3: Case Studies

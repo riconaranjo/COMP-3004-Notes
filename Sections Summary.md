@@ -473,6 +473,14 @@ To **identify subsystem services**
 
 # Section 4: Detailed Object Design
 
+**Detailed object design** creates an object model that contains the solution domain.
+- by identifying solution domain objects
+- using:
+  - **analysis object model**
+  - **subsystem design model**
+    - subsystem decomposition
+    - system architecture strategies
+
 ## Tasks
 
 1. Identify opportunities for **software reuse**

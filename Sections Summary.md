@@ -473,6 +473,110 @@ To **identify subsystem services**
 
 # Section 4: Detailed Object Design
 
+## Tasks
+
+1. Identify opportunities for **software reuse**
+    - COTS components
+    - design patterns
+2. Specify **services**
+    - interface specification
+    - this becomes the API
+3. **Restructure** object model
+    - for _understandability + maintainability_
+4. **Optimize** object model
+    - for _performance requirements_
+
+## Code Reuse
+
+### Specification Inheritance
+- using inheritance to classify concepts into type hierarchies
+  - "is-a" relationship between generalized + specialized classes
+  - _classic inheritance_
+
+### Implementation Inheritance
+- **not** an **“is-a”** relationship
+- use of inheritance purely for purposes of **code reuse**
+- superclass functionality is reused by:
+  - _sub-classing_
+  - _refining behaviour_
+- quick and dirty way to reuse operations
+  - can result in unintended consequences
+- not an intuitive use of inheritance
+
+## Delegation
+
+A better approach for code reuse than inheritance.
+- e.g. _a FastSet that has a HashTable instead of inheriting from it_
+
+**Strict inheritance:** when polymorphism is allowed.
+
+## Encapsulating Legacy Components
+
+**Adapter:**
+- good for modifying a legacy / existing component interface
+  - similar to bridge but with existing code
+- e.g. _new UI for existing backend_
+
+## Encapsulating Context
+
+**Strategy design pattern:**
+- good for dynamically changing between concrete implementations based on context
+  - same as bridge but client decides implementation
+- e.g. _changing network connection type dynamically_
+
+## Encapsulating Platforms
+
+**Abstract factory:**
+- good for shielding client from object creation process
+  - of related objects
+  - and prevents use of incompatible objects
+- e.g. _products from different manufacturers_
+
+## Encapsulating Control Flow
+
+**Command:**
+- good for generic user requests
+  - without having to know request contents
+- e.g. _execute / undo / store_
+
+## Encapsulating Hierarchies
+
+**Composite:**
+- good for representing recursive hierarchy
+  - and adding new components without affecting existing ones
+- e.g. _UI toolkits_
+
+## Maintaining Consistency
+
+**Observer:**
+- good for propagating model changes across view
+- e.g. _MVC architecture_
+
+## Specifying Interfaces
+
+**Steps:**
+1. **identify missing attributes and operations**
+    - augment object design model
+1. **specify visibility and signatures**
+    - decide on operations available to other objects and subsystems
+    - determine operation signatures and return types
+1. **specify contracts**
+    - describe object and operation behaviour in terms of constraints
+
+## Class Developer Roles (Part of Contracts)
+
+**Class Developers** have three possible roles:
+- class **implementer** [writes code]
+- class **user** [uses the code]
+- class **extender** [creates specializations]
+
+## Contracts
+
+They are **constraints** on a class.
+- _invariant_
+- _precondition_
+- _postcondition_
+
 # Section 5: Implementation
 
 # Section 6: Testing

@@ -31,22 +31,22 @@ Section 4.4: [Refined System Decomposition](#section-44-refined-system-decomposi
 ## Tasks
 
 1. Identify opportunities for **software reuse**
-  - COTS components
-  - design patterns
+    - COTS components
+    - design patterns
 2. Specify **services**
-  - interface specification
-  - this becomes the API
+    - interface specification
+    - this becomes the API
 3. **Restructure** object model
-  - for _understandability + maintainability_
+    - for _understandability + maintainability_
 4. **Optimize** object model
-  - for _performance requirements_
+    - for _performance requirements_
 
 `// COTS: common-off-the-shelf`<br>
 `// API: application programming interface`
 
 # Section 4.2: Reusing Pattern Solutions
 
-**Reusing** already exiting tools / frameworks / subsystems is **faster and cheaper** than designing form scratch.
+**Reusing** already exiting tools / frameworks / subsystems is **faster and cheaper** than designing from scratch.
 - this allows for **modifiability + extensibility**
 
 **Major Design Patterns:** creational, structural, behavioural
@@ -168,13 +168,6 @@ Due to frequent changes during the development phase caused by:
   - similar to bridge but with existing code
 - e.g. _new UI for existing backend_
 
-## Encapsulating Context
-
-**Strategy design pattern:**
-- good for dynamically changing between concrete implementations based on context
-  - same as bridge but client decides implementation
-- e.g. _changing network connection type dynamically_
-
 ## Encapsulating Platforms
 
 **Abstract factory:**
@@ -197,6 +190,13 @@ Due to frequent changes during the development phase caused by:
   - and adding new components without affecting existing ones
 - e.g. _UI toolkits_
 
+## Encapsulating Context
+
+**Strategy design pattern:**
+- good for dynamically changing between concrete implementations based on context
+  - same as bridge but client decides implementation
+- e.g. _changing network connection type dynamically_
+
 ## Maintaining Consistency
 
 **Observer:**
@@ -205,13 +205,13 @@ Due to frequent changes during the development phase caused by:
 
 ## Heuristics for Selecting Design Patterns
 
-### Abstract Factory
-- manufacturer independence
-- platform independence
-
 ### Adapter
 - compliance with existing interface
 - reuse of existing legacy component
+
+### Abstract Factory
+- manufacturer independence
+- platform independence
 
 ### Bridge
 - support for future protocols
@@ -234,13 +234,13 @@ Due to frequent changes during the development phase caused by:
 - integrating all existing / partial models into one coherent whole
 
 **Steps:**
-- Identify missing attributes and operations
-  - augment object design model
-- specify visibility and signatures
-  - decide on operations available to other objects and subsystems
-  - determine operation signatures and return types
-- specify contracts
-  - describe object and operation behaviour in terms of constraints
+1. **identify missing attributes and operations**
+    - augment object design model
+1. **specify visibility and signatures**
+    - decide on operations available to other objects and subsystems
+    - determine operation signatures and return types
+1. **specify contracts**
+    - describe object and operation behaviour in terms of constraints
 
 ## Class Developer Roles (Part of Contracts)
 
@@ -267,7 +267,7 @@ The **class implementer uses** the class from another class.
 
 ### Class Extender
 
-The **class implementer writes** the class code.
+The **class extender writes** the uses class code.
 - develops specializations of the class
 - uses interface specification as indication of:
   - the behaviour of the class
@@ -275,7 +275,7 @@ The **class implementer writes** the class code.
 
 ## Contracts
 
-A **contract species constraints** on a class that:
+A **contract specifies constraints** on a class that:
   - must be **ensured** by:
     - class implementer
     - class extender
@@ -339,6 +339,8 @@ t.getNumPlayers_afterAccept() = t.getNumPlayers_beforeAccept() + 1
 
 ## Object Constraint Language
 
+`// omitted from final`
+
 **Object Constraint Language** [OCL] is a **formal language to specify constraints**.
 - may be used for constraints on:
   - single model elements
@@ -362,6 +364,8 @@ a
 ![ocl](../img/ocl.png)
 
 ## OCL Collections
+
+`// omitted from final`
 
 **Constraints** are based on navigation along associations:
 

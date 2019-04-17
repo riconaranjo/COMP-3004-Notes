@@ -351,15 +351,15 @@ A **Strategy** design pattern is used to **encapsulate algorithms / context**.
 # Section 3.4: Refined System Decomposition
 
 1. **Group subsystems into components and nodes**
-  - components: group of 1+ subsystems
-  - nodes: physical environment on which components run
+    - components: _group of 1+ subsystems_
+    - nodes: _physical environment on which components run_
 2. **Identify:**
-  - persistent data
-  - access control
-  - global control flow
-  - boundary conditions
+    - persistent data
+    - access control
+    - global control flow
+    - boundary conditions
 3. **Then identify**
-  - subsystem services / interfaces
+    - subsystem services / interfaces
 
 **Components:** a single or group of subsystems
 
@@ -368,7 +368,7 @@ A **Strategy** design pattern is used to **encapsulate algorithms / context**.
 **Node:** the physical device / environment running a component
 
 **System:** a group of runtime components
-- may be distributed across multiple nodes
+- _may be distributed across multiple nodes_
 
 ## System Strategies
 
@@ -467,9 +467,9 @@ To **identify subsystem services**
 
 ## Identifying Boundary Conditions
 
-1. **analyze configuration of persistent objects**
-2. **analyze start-up / shutdown of each component**
-3. **handle exceptions for each component failure**
+1. analyze configuration of persistent objects
+2. analyze start-up / shutdown of each component
+3. handle exceptions for each component failure
 
 # Section 4: Detailed Object Design
 
@@ -551,6 +551,31 @@ A better approach for code reuse than inheritance.
 **Observer:**
 - good for propagating model changes across view
 - e.g. _MVC architecture_
+
+## Heuristics for Selecting Design Patterns
+
+### Adapter
+- compliance with existing interface
+- reuse of existing legacy component
+
+### Abstract Factory
+- manufacturer independence
+- platform independence
+
+### Bridge
+- support for future protocols
+
+### Command
+- all commands should be logged
+- all commands should be reversible
+
+### Composite
+- support for aggregate structures
+- hierarchies with variable depth / width
+
+### Strategy
+- decoupling of policy and mechanisms
+- interchanges of algorithms at runtime
 
 ## Specifying Interfaces
 

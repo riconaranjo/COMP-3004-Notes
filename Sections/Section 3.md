@@ -462,16 +462,16 @@ A **Strategy** design pattern is used to **encapsulate algorithms / context**.
 
 ## Mapping Subsystems to Components
 
-Steps form ***mapping subsystems to components:**
+Steps for **mapping subsystems to components:**
 1. select hardware configuration + platform
-  - decide on nodes + select hardware
-  - determine communication methods
-  - determine software
-    - OS / legacy software / COTS software
+    - decide on nodes + select hardware
+    - determine communication methods
+    - determine software
+      - OS / legacy software / COTS software
 2. allocate objects + subsystems to nodes
-  - to enable equitable distribution
-    - of functionality
-    - processing power
+    - to enable equitable distribution:
+      - of functionality
+      - processing power
 
 ![uml-deployment-advanced](../img/uml-deployment-advanced.png)
 
@@ -482,7 +482,7 @@ Steps form ***mapping subsystems to components:**
   - access control
   - concurrency
 
-***Persistent Objects** may be:
+**Persistent Objects** may be:
 - entity objects
 - user information
 - aspects of boundary objects _[e.g. submitted forms saved]_

@@ -73,7 +73,7 @@ Internal system behaviour from user's point of view.
 Objects + their attributes + their operations.
 - class diagrams [object associations]
 
-# Section 3: High-Level System Design
+# Section 3.1: High-Level System Design
 
 The goal of high-level system design is to turn the analysis products into a system design model.
 - figure out what the **subsystems** are _[inital subsystem decomposition]_
@@ -111,6 +111,8 @@ This phase is about determining:
 - refined subsystem **decomposition**
   - subsystems organized into _layers + partitions_
 - system architecture **strategies**
+
+# Section 3.2: Initial System Decomposition
 
 ## Subsystems
 
@@ -253,8 +255,7 @@ Each filter is a subsystem
 | utility    | how useful is to the client |
 | usability  | how easy is it to use       |
 
-
-## Design Problems
+# Section 3.3: Design Patterns
 
 - **creational:** object creation [mechanisms]
   - _abstract factory_
@@ -346,6 +347,129 @@ A **Strategy** design pattern is used to **encapsulate algorithms / context**.
 - e.g. _selecting network connections (Wi-Fi, Ethernet, etc)_
 
 ![strategy](/img/strategy.png)
+
+# Section 3.4: Refined System Decomposition
+
+1. **Group subsystems into components and nodes**
+  - components: group of 1+ subsystems
+  - nodes: physical environment on which components run
+2. **Identify:**
+  - persistent data
+  - access control
+  - global control flow
+  - boundary conditions
+3. **Then identify**
+  - subsystem services / interfaces
+
+**Components:** a single or group of subsystems
+
+**Runtime components:** component with a unique _process_
+
+**Node:** the physical device / environment running a component
+
+**System:** a group of runtime components
+- may be distributed across multiple nodes
+
+## System Strategies
+
+**Software / Hardware Mapping:**
+- used for off-the-shelf / legacy components
+  - for hardware configuration
+  - for internode communications
+
+**Data Management:**
+- used for identification of:
+  - persistent data
+  - storage locations
+  - acces mechanisms
+
+**Access Control:**
+- used for:
+  - _authetication_
+  - _authorization_
+  - _confidentiality_
+
+**Control Flow:**
+- used for control + concurrency
+
+**Boundary conditions:**
+- used for system initialization / shutdown
+- edge cases
+
+## Refined Decomposition Activities
+
+1. Mapping subsystems to components
+2. Storing persistent data
+3. Providing access control
+4. Designing global control flow
+5. Identifying services
+6. Identifying boundary conditions
+
+## Mapping Subsystems to Components
+
+Steps for **mapping subsystems to components:**
+1. **select hardware configuration + platform**
+    - decide on nodes + select hardware
+    - determine communication methods
+    - determine software
+      - OS / legacy software / COTS software
+2. **allocate objects + subsystems to nodes**
+    - to enable equitable distribution:
+      - of functionality
+      - processing power
+
+## Storing Persistent Data
+
+In order to **select a storage management strategy:**
+- you must take into account _non-functional requirements_
+
+### Persistent Storage Strategies
+
+**Flat Files:**
+- low-level sequence of bytes
+- can be very fast
+- issues with concurrency / data loss
+
+**Relational Database:**
+- tables of a predefined schema
+- mapping objects to schema may be complex
+- built in concurrency / access control / crash recovery
+  - _most common approach_
+
+**OO Database:**
+- supports objects and their associations
+  - _can do association based queries_
+- slower than relational database
+
+## Access Control
+
+**Static access control:** modelled as object attributes
+
+**Dynamic access control:** implemented with _Proxy_ design pattern
+
+### Access Matrix
+
+- if it's on the table, it's a permission
+
+![access-matrix](/img/access-matrix.png)
+
+### Rule-Based Access Matrix
+
+- a list of all existing permissions
+
+![access-matrix-rule](/img/access-matrix-rule.png)
+
+## Identifying Services
+
+To **identify subsystem services**
+- first review subsystem dependencies
+- then defined an interface for each service
+
+## Identifying Boundary Conditions
+
+1. **analyze configuration of persistent objects**
+2. **analyze start-up / shutdown of each component**
+3. **handle exceptions for each component failure**
 
 # Section 4: Detailed Object Design
 

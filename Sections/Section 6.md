@@ -399,12 +399,12 @@ The focus of system testing is to test the complete integrated system.
 - ensuring it complies with functional + non-functional requirements
 
 ## Activities
-1. Functional Testing
-  - _does it meet functional requirements_
-2. Performance Testing
-  - _does it meet non-functional requirements_
-3. Acceptance Testing
-  - _does it serve the client's expectations / needs_
+1. **Functional Testing**
+    - _does it meet functional requirements_
+2. **Performance Testing**
+    - _does it meet non-functional requirements_
+3. **Acceptance Testing**
+    - _does it serve the client's expectations / needs_
 
 **Note:** a use-case is an abstraction of a scenario
 - a scenario is an _'instance'_ use-case

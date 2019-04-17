@@ -850,12 +850,14 @@ Then start **test layers together** until you have full integration of the three
 # Section 6.4: System Testing
 
 ## Activities
-1. Functional Testing
-  - _does it meet functional requirements_
-2. Performance Testing
-  - _does it meet non-functional requirements_
-3. Acceptance Testing
-  - _does it serve the client's expectations / needs_
+
+1. **Functional Testing**
+    - _does it meet functional requirements_
+2. **Performance Testing**
+    - _does it meet non-functional requirements_
+3. **Acceptance Testing**
+    - _does it serve the client's expectations / needs_
+      - e.g. _beta  testing_
 
 ## Testing Recap
 

@@ -105,14 +105,14 @@ Result from implementation is source code.
 ### Optimizing the Object Model
 
 **Optimizing access paths:**
-- repeated association traversals
+- **repeated association traversals**
   - identify frequency operations with multiple association traversals
   - make these direct connections
     - this may introduce redundant associations but reduces bottlenecks
-- replace _many_ multiplicity associations
+- **replace _many_ multiplicity associations**
   - with _one_ qualified association
   - _use key or indexing to associate objects_
-- for attributes only used for get / set operations
+- **for attributes only used for get / set operations**
   - move to calling class
   - _this may reduce the number of classes_
 
@@ -295,7 +295,7 @@ These reduce multiplicity on a "many" side of an association
 
 ### Vertical Mapping [modifiability]
 
-- two tables per object:
+- multiple tables per object:
   - one super-class attributes
   - one for sub-class attributes
     - super-class table has column for actual sub-class

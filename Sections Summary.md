@@ -577,7 +577,98 @@ They are **constraints** on a class.
 - _precondition_
 - _postcondition_
 
+Contracts are **mapped to exceptions**.
+- _exception thrown when contract broken_
+
 # Section 5: Implementation
+
+## Model Transformation
+
+**Model transformation** is when changes are applied to an existing object model.
+- such as modifying classes / attributes / operations
+- in order to:
+  - _simplify_
+  - _optimize_
+  - _better meet requirements_
+- e.g. _grouping related classes under same super-class_
+
+**Forward Engineering:** model --> implementation
+
+**Reverse Engineering:** model <-- implementation
+
+## Optimizing the Object Model
+
+**Optimizing access paths:**
+- **repeated association traversals**
+  - identify frequency operations with multiple association traversals
+  - make these direct connections
+    - this may introduce redundant associations but reduces bottlenecks
+- **replace _many_ multiplicity associations**
+  - with _one_ qualified association
+  - _use key or indexing to associate objects_
+- **for attributes only used for get / set operations**
+  - move to calling class
+  - _this may reduce the number of classes_
+
+## Qualified Associations
+
+These reduce multiplicity on a "many" side of an association
+- can be used with one-to-many + many-to-many
+- mapped as:
+  - additional [unique] _qualifier_ attribute on destination object
+  - a keyed collection [map] on source object
+    - **key:** qualifier attribute
+    - **value:** destination object
+
+### Association Classes
+
+**Association classes** are used to hold attributes and operations specific to an association
+- implemented as a seperate object
+  - with binary associations
+    - each mapped to a set of reference attributes
+- e.g. _statistics object for generating league stats_
+
+## Relational Database Concepts
+
+### Schema
+
+- data description
+- the set of attributes stored for each object
+  - _aka data meta-model_
+
+### Primary Key
+
+- set of attributes used to **uniquely** identify a record
+  - _best if not made of attributes that can change_
+
+### Foreign Key
+
+- attribute that references primary key in another table
+  - links data records between tables
+
+## Mapping Classes and Attributes
+
+| code      | database |
+| --------- | -------- |
+| class     | table    |
+| attribute | column   |
+| instance  | row      |
+
+## Implementation Recap
+
+Strategies for mapping models to code:
+- avoid _"many"_ associations
+  - use qualified associations instead
+  - or association classes
+    - to hold attributes specific to an operation
+
+Strategies for mapping models to persistent storage:
+- associations to collections
+  - vertical / horizontal mapping
+- contracts mapped to exceptions
+- object models mapped to storage
+  - **buried associations:** foreign key in destination / source
+  - **association tables:** seperate table with foreign keys
 
 # Section 6: Testing
 

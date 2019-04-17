@@ -381,7 +381,7 @@ A **Strategy** design pattern is used to **encapsulate algorithms / context**.
 - used for identification of:
   - persistent data
   - storage locations
-  - acces mechanisms
+  - access mechanisms
 
 **Access Control:**
 - used for:

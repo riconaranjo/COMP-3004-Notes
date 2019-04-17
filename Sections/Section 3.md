@@ -668,8 +668,8 @@ To **identify boundary use-cases**:
     - _shutdown_
     - _configuration_
 3. handle exceptions for each component failure
-  - decide on system response
-  - add an _extending_ use-case
+    - decide on system response
+    - add an _extending_ use-case
 
 `// component is a collection of subsystems (or just one)`
 
@@ -679,12 +679,12 @@ To **identify boundary use-cases**:
 ## Refined Decomposition Recap
 
 1. Group subsystems into components and nodes
-  - components: group of 1+ subsystems
-  - nodes: physical environment on which components run
+    - components: group of 1+ subsystems
+    - nodes: physical environment on which components run
 2. Identify:
-  - persistent data
-  - access control
-  - global control flow
-  - boundary conditions
+    - persistent data
+    - access control
+    - global control flow
+    - boundary conditions
 3. Then identify
-  - subsystem services / interfaces
+    - subsystem services / interfaces

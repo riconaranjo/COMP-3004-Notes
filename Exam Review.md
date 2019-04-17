@@ -55,7 +55,7 @@ Remote content provider using an **existing** third-party content provider.
 
 ![sequence-exam-1](/img/sequence-exam-1.png)
 
-# Exercise 1: UML Use-Case Diagram
+# Exercise 2: UML Use-Case Diagram
 
 - social media service with API for other remote social media sites
   - allows users of remote sites to:
